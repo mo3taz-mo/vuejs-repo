@@ -5,14 +5,20 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "randa": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
+    "@progress/kendo-dateinputs-vue-wrapper": "^2019.3.1023",
+    "@progress/kendo-grid-vue-wrapper": "^2019.3.1023",
+    "@progress/kendo-theme-default": "^4.6.0",
+    "@progress/kendo-ui": "^2019.3.1023",
     "core-js": "^3.1.2",
     "vue": "^2.6.10",
     "vue-i18n": "^8.0.0",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "vuetify": "^2.1.7"
   },
   "devDependencies": {
     "@kazupon/vue-i18n-loader": "^0.3.0",

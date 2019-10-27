@@ -1,12 +1,17 @@
 <template>
   <div id="dashboard-id">
-    eeee
+    <kendo-calendar :value="new Date()"></kendo-calendar>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'dashboard-id'
+    name: 'dashboard-id',
+    data () {
+      return {
+        msg: 'Hello Kendo UI for Vue.js'
+      }
+    }
   }
 </script>
 
