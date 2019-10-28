@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="login-id">
     <form id="ticketsForm" ref="myForm" v-kendo-validator @submit="onLogin">
         <input type="text"
             id="userName"
@@ -19,25 +19,22 @@
             <button class="k-button k-primary" type="submit">Login</button>
         </div>
     </form>
-
-    <!-- <div class="status"></div> -->
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App',
-  components: {},
-  methods: {
+  export default {
+    name: 'login-id',
+    methods: {
     onLogin: function() {
       return this.login.user
     }
-  },
-  data: () => ({
-     phoneNumber: "",
-     login: {"user": "", "password": ""}
-  }),
-};
+    },
+    data: () => ({
+        phoneNumber: "",
+        login: {"user": "", "password": ""}
+    }),
+  }
 </script>
 
 <style scopped>

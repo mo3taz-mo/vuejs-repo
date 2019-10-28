@@ -2,12 +2,18 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import AdminMainPage from '../modules/admin/AdminMainPage.vue'
 import DashboardMainPage from '../modules/dashboard/DashboardMainPage.vue'
+import LoginForm from '../modules/login/LoginForm.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'login-id',
+    component: LoginForm
+  },
+  {
+    path: '/dashboard',
     name: 'dashboard-id',
     component: DashboardMainPage
   },

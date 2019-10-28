@@ -1,8 +1,7 @@
 <template>
   <div id="nav-side">
-    <ul>
-      <li>Admin</li>
-    </ul> 
+    <router-link to="/dashboard">Dashboard</router-link> |
+    <router-link to="/admin">admin</router-link>
   </div>
 </template>
 
