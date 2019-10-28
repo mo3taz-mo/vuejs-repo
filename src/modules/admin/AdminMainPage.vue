@@ -5,14 +5,6 @@
                 :sortable="true"
                 :filterable="true"
                 :groupable="true"
-                v-on:change="onChange"
-                v-on:databinding="onDataBinding"
-                v-on:databound="onDataBound"
-                v-on:sort="onSorting"
-                v-on:filter="onFiltering"
-                v-on:group="onGrouping"
-                v-on:groupexpand="onGroupExpand"
-                v-on:groupcollapse="onGroupCollapse"
                 :pageable="true">
     </kendo-grid>
   </div>
