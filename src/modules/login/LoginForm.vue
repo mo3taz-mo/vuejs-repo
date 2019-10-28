@@ -1,6 +1,6 @@
 <template>
   <div id="login-id">
-    <form id="ticketsForm" ref="myForm" v-kendo-validator @submit="onLogin">
+    <form id="ticketsForm" ref="myForm" v-kendo-validator>
         <input type="text"
             id="userName"
             name="userName"
@@ -16,7 +16,7 @@
             validationMessage="Field is required"
             class="k-textbox" />
         <div>
-            <button class="k-button k-primary" type="submit">Login</button>
+            <button class="k-button k-primary" type="submit" @click.stop.prevent="onLogin">Login</button>
         </div>
     </form>
   </div>
@@ -27,7 +27,7 @@
     name: 'login-id',
     methods: {
     onLogin: function() {
-      return this.login.user
+      this.$router.push("/dashboard");
     }
     },
     data: () => ({

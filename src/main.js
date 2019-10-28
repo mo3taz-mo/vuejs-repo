@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
 
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
 import '@progress/kendo-ui'
 import '@progress/kendo-theme-default/dist/all.css'
 import { Calendar } from '@progress/kendo-dateinputs-vue-wrapper'
@@ -11,7 +15,7 @@ import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapp
 import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper'
 
 Vue.component(
-  Calendar.name, 
+  Calendar.name,  
   Calendar, 
   Grid.name,
   Grid, 
