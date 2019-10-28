@@ -2,10 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
-
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
+Vue.use(GridInstaller)
+Vue.use(InputsInstaller)
+Vue.use(ValidatorInstaller)
+
+import Default from './components/Layout/Default.vue'
+import NoBars from './components/Layout/NoBars.vue'
 
 import '@progress/kendo-ui'
 import '@progress/kendo-theme-default/dist/all.css'
@@ -30,9 +35,9 @@ Vue.component(
   ValidatorInstaller,
   ValidatorInstaller.name
 )
-Vue.use(GridInstaller);
-Vue.use(InputsInstaller);
-Vue.use(ValidatorInstaller)
+Vue.component('default-layout', Default)
+Vue.component('no-bars-layout', NoBars)
+
 
 import vuetify from './plugins/vuetify';
 

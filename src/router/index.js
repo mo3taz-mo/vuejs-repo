@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/',
     name: 'login-id',
-    meta: {layout: 'login-form'},
+    meta: {layout: 'no-bars'},
     component: LoginForm
   },
   {
