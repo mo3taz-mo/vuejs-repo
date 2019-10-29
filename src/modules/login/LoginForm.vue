@@ -22,20 +22,7 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'login-id',
-    methods: {
-    onLogin: function() {
-      this.$router.push("/dashboard");
-    }
-    },
-    data: () => ({
-        phoneNumber: "",
-        login: {"user": "", "password": ""}
-    }),
-  }
-</script>
+<script src="./LoginForm.js"></script>
 
 <style scopped>
   .k-button, .status {

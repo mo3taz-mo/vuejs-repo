@@ -3,11 +3,6 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'dashboard-id',
-    methods: {},
-  }
-</script>
+<script src="./DashboardMainPage.js"></script>
 
 <style scoped></style>

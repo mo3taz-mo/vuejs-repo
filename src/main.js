@@ -39,8 +39,6 @@ Vue.component('default-layout', Default)
 Vue.component('no-bars-layout', NoBars)
 
 
-import vuetify from './plugins/vuetify';
-
 Vue.config.productionTip = false
 
 //solving ($' is not defined (no-undef) vuejs kendo) issue
@@ -52,7 +50,6 @@ new Vue({
   router,
   i18n,
   render: h => h(App),
-  vuetify,
 
   components: {
     App,
