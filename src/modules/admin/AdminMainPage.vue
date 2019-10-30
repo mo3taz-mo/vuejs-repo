@@ -1,5 +1,6 @@
 <template>
   <div id="admin-id">
+    <h1>sdf<span>rtgretg</span></h1>
     <kendo-grid :data-source="localDataSource"
                 :selectable="'multiple cell'"
                 :sortable="true"
@@ -12,4 +13,4 @@
 
 <script src="./AdminMainPage.js"></script>
 
-<style scoped></style>
+<style lang="scss" scoped>@import './theme/Admin.scss';</style>

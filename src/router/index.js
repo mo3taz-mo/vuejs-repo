@@ -1,28 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import AdminMainPage from '../modules/admin/AdminMainPage.vue'
-import DashboardMainPage from '../modules/dashboard/DashboardMainPage.vue'
-import LoginForm from '../modules/login/LoginForm.vue'
 // import store from '../store.js';
 
 Vue.use(VueRouter)
+
+const Admin = () => import('../modules/admin/AdminMainPage.vue')
+const Login = () => import('../modules/login/LoginForm.vue')
+const Dashboard = () => import('../modules/dashboard/DashboardMainPage.vue')
 
 const routes = [
   {
     path: '/',
     name: 'login-id',
     meta: {layout: 'no-bars'},
-    component: LoginForm
+    component: Login
   },
   {
     path: '/dashboard',
     name: 'dashboard-id',
-    component: DashboardMainPage
+    component: Dashboard
   },
   {
     path: '/admin',
     name: 'admin-id',
-    component: AdminMainPage
+    component: Admin
   }
 ]
 
