@@ -5,7 +5,6 @@ import i18n from './i18n'
 import Vuex from 'vuex'
 
 //scss
-import './assets/sass/light-bootstrap-dashboard.scss'
 import './theme/style.css'
 import './theme/custom.scss'
 
