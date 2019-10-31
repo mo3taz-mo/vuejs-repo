@@ -21,7 +21,7 @@ import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapp
 import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper'
 
 //form validation
-import Vuelidate from 'vuelidate'
+// import Vuelidate from 'vuelidate'
 
 //Global
 
@@ -30,7 +30,7 @@ Vue.use(Vuex)
 Vue.use(GridInstaller)
 Vue.use(InputsInstaller)
 Vue.use(ValidatorInstaller)
-Vue.use(Vuelidate)
+// Vue.use(Vuelidate)
 
 Vue.component(
   //kendo starts
@@ -50,7 +50,7 @@ Vue.component(
   ValidatorInstaller.name,
   //kendo ends
   //form validation starts
-  Vuelidate,
+  //Vuelidate,
   //form validation ends
   //bootstrap starts
 

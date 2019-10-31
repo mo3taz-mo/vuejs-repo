@@ -1,5 +1,5 @@
 #app{
-    background-image: url(/img/login.09becd37.jpg);
+    background-image: url("../../assets/img/login.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,6 +16,20 @@
         .login-form{
             background-color: rgba(255, 255, 255,1);
             box-shadow: 1px 2px 16px 4px #636363;
+            .k-button, .status {
+                margin-top: 10px;
+            }
+            .invalid {
+                color: red;
+            }
+            .valid {
+                color: green;
+            }
+        }
+        .login-logo{
+            img{
+                height: 170px;
+            }
         }
     }
 }

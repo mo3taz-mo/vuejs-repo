@@ -3,21 +3,45 @@
     <div class="login-content">
         <div class="login-logo">
             <a href="index.html">
-                <img class="align-content" src="images/logo.png" alt="">
+                <img class="align-content" src="../../assets/images/logo.png" alt="">
             </a>
         </div>
         <div class="login-form">
-            <form>
+            <form  ref="myForm" v-kendo-validator @submit.prevent="onSubmit">
                 <div class="form-group">
                     <label>Uersname</label>
-                    <input type="email" class="form-control" placeholder="Uersname">
+                    <input type="text" 
+                            id="username"
+                            name="username"
+                            class="k-textbox form-control" 
+                            placeholder="Uersname" 
+                            required
+                            validationMessage="Field is required">
                 </div>
                 <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <label>password</label>
+                    <input type="password" 
+                            id="password"
+                            name="password"
+                            class="k-textbox form-control" 
+                            placeholder="Password" 
+                            required
+                            validationMessage="Field is required">
                 </div>
-                <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                <button class="btn btn-primary btn-flat m-b-30 m-t-30" type="submit">Sign in</button>
             </form>
+            <!-- <form id="ticketsForm" ref="myForm" v-kendo-validator @submit.prevent="onSubmit">
+                <input type="search"
+                    id="search"
+                    name="search"
+                    required
+                    validationMessage="Field is required"
+                    class="k-textbox" />
+
+                <div>
+                    <button class="k-button k-primary" type="submit">Submit</button>
+                </div>
+            </form> -->
         </div>
     </div>
   </div>

@@ -1,12 +1,16 @@
+
 export default {
     name: 'login-id',
-    methods: {
-    onLogin: function() {
-      this.$router.push("/dashboard");
-    }
+      methods: {
+        onSubmit: function () {
+            var validator = this.kendoValidator
+            if (validator.validate()) {
+              this.$router.push("/dashboard");
+            } 
+        }
     },
     data: () => ({
-        phoneNumber: "",
-        login: {"user": "", "password": ""}
+      username: '',
+      password: ''
     }),
   }
