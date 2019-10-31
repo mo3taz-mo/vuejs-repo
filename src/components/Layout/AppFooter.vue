@@ -25,9 +25,5 @@
 </script>
 
 <style lang="scss" scoped>
-    footer.site-footer .footer-inner {
-        position: fixed;
-        bottom: 0;
-        width: 71%;
-    }
+    
 </style>

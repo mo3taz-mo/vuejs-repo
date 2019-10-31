@@ -4,9 +4,11 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const Admin = () => import('../modules/admin/AdminMainPage.vue')
+// const Admin = () => import('../modules/admin/AdminMainPage.vue')
 const Login = () => import('../modules/login/LoginForm.vue')
 const Dashboard = () => import('../modules/dashboard/DashboardMainPage.vue')
+const CreateNewUser = () => import('../modules/admin/users/CreateNewUser.vue')
+const UsersList = () => import('../modules/admin/users/UsersList.vue')
 
 const routes = [
   {
@@ -21,10 +23,20 @@ const routes = [
     component: Dashboard
   },
   {
-    path: '/admin',
-    name: 'admin-id',
-    component: Admin
+    path: '/create-user',
+    name: 'create-user',
+    component: CreateNewUser
+  },
+  {
+    path: '/user-list',
+    name: 'user-list',
+    component: UsersList
   }
+  // {
+  //   path: '/admin',
+  //   name: 'admin-id',
+  //   component: Admin
+  // }
 ]
 
 const router = new VueRouter({

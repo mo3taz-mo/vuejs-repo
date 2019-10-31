@@ -1,37 +1,29 @@
 <template>
   <div id="login-id">
-    <form id="ticketsForm" ref="myForm" v-kendo-validator>
-        <input type="text"
-            id="userName"
-            name="userName"
-            v-model="login.user"
-            required
-            validationMessage="Field is required"
-            class="k-textbox" />
-        <input type="text"
-            id="password"
-            name="password"
-            v-model="login.password"
-            required
-            validationMessage="Field is required"
-            class="k-textbox" />
-        <div>
-            <button class="k-button k-primary" type="submit" @click.stop.prevent="onLogin">Login</button>
+    <div class="login-content">
+        <div class="login-logo">
+            <a href="index.html">
+                <img class="align-content" src="images/logo.png" alt="">
+            </a>
         </div>
-    </form>
+        <div class="login-form">
+            <form>
+                <div class="form-group">
+                    <label>Uersname</label>
+                    <input type="email" class="form-control" placeholder="Uersname">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+            </form>
+        </div>
+    </div>
   </div>
 </template>
 
 <script src="./LoginForm.js"></script>
-
-<style scopped>
-  .k-button, .status {
-        margin-top: 10px;
-    }
-    .invalid {
-        color: red;
-    }
-    .valid {
-        color: green;
-    }
+<style lang="scss" scopped>
+@import './theme/login.scss';
 </style>

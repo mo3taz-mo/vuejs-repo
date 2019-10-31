@@ -4,9 +4,9 @@
     <div id="right-panel" class="right-panel">
         <NavTop />
         <div class="content">
-          <slot />
-          <AppFooter />
+          <slot />          
         </div>
+        <AppFooter />
     </div>
     
     
