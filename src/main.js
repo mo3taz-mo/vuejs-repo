@@ -5,6 +5,8 @@ import i18n from './i18n'
 import Vuex from 'vuex'
 
 //scss
+import './assets/sass/light-bootstrap-dashboard.scss'
+import './theme/style.css'
 import './theme/custom.scss'
 
 //layouts
@@ -21,6 +23,9 @@ import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wra
 
 //form validation
 import Vuelidate from 'vuelidate'
+
+//Global
+
 
 Vue.use(Vuex)
 Vue.use(GridInstaller)
@@ -46,7 +51,11 @@ Vue.component(
   ValidatorInstaller.name,
   //kendo ends
   //form validation starts
-  Vuelidate
+  Vuelidate,
+  //form validation ends
+  //bootstrap starts
+
+  //bootstrap ends
 )
 Vue.component('default-layout', Default)
 Vue.component('no-bars-layout', NoBars)

@@ -1,0 +1,33 @@
+<template>
+    <div id="app-footer">
+        <div class="clearfix"></div>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-inner bg-white">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Copyright &copy; 2018 Ela Admin
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        Designed by <a href="https://colorlib.com">Colorlib</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</template>
+
+<script>
+  export default {
+    name: 'footer',
+    
+  }
+</script>
+
+<style lang="scss" scoped>
+    footer.site-footer .footer-inner {
+        position: fixed;
+        bottom: 0;
+        width: 71%;
+    }
+</style>
