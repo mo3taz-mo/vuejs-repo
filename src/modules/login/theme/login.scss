@@ -1,4 +1,4 @@
-#app{
+.container{
     background-image: url("../../assets/img/login.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@
     position: absolute;
     right: 0;
     width: 100%;    
-    .sufee-login{
+    #login-id{
         background-color: rgba(0, 0, 0, 0.3);
         height: 100%;
         position: absolute;
