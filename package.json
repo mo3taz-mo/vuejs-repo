@@ -10,6 +10,8 @@
     "randa": "vue-cli-service serve"
   },
   "dependencies": {
+    "@progress/kendo-base-components-vue-wrapper": "^2019.3.1023",
+    "@progress/kendo-datasource-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-dateinputs-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-dropdowns-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-grid-vue-wrapper": "^2019.3.1023",
