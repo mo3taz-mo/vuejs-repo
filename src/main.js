@@ -22,19 +22,15 @@ import { Grid, GridInstaller } from '@progress/kendo-grid-vue-wrapper'
 import { DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
 import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapper'
 import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper'
-
-//form validation
-// import Vuelidate from 'vuelidate'
-
-//Global
-
+import { AutoComplete,  ComboBox,  DropDownList,  MultiSelect,
+         MultiColumnComboBox,  MultiColumnComboBoxColumn,  DropdownsInstaller } from '@progress/kendo-dropdowns-vue-wrapper'
 
 Vue.use(Vuex)
 Vue.use(GridInstaller)
 Vue.use(DataSourceInstaller);
 Vue.use(InputsInstaller)
 Vue.use(ValidatorInstaller)
-// Vue.use(Vuelidate)
+Vue.use(DropdownsInstaller);
 
 Vue.component(
   //kendo starts
@@ -52,7 +48,13 @@ Vue.component(
   Validator.name,
   ValidatorInstaller,
   ValidatorInstaller.name,
-  DataSourceInstaller
+  DataSourceInstaller,
+  AutoComplete,
+  ComboBox,
+  DropDownList,
+  MultiSelect,
+  MultiColumnComboBox,
+  MultiColumnComboBoxColumn
   //kendo ends
   //form validation starts
   //Vuelidate,

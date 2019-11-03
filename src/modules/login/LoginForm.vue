@@ -10,38 +10,26 @@
             <form  ref="myForm" v-kendo-validator @submit.prevent="onSubmit">
                 <div class="form-group">
                     <label>Uersname</label>
-                    <input type="text" 
+                    <input type="text"
                             id="username"
                             name="username"
-                            class="k-textbox form-control" 
-                            placeholder="Uersname" 
+                            class="k-textbox form-control"
+                            placeholder="Uersname"
                             required
                             validationMessage="Field is required">
                 </div>
                 <div class="form-group">
                     <label>password</label>
-                    <input type="password" 
+                    <input type="password"
                             id="password"
                             name="password"
-                            class="k-textbox form-control" 
-                            placeholder="Password" 
+                            class="k-textbox form-control"
+                            placeholder="Password"
                             required
                             validationMessage="Field is required">
                 </div>
                 <button class="btn btn-primary btn-flat m-b-30 m-t-30" type="submit">Sign in</button>
             </form>
-            <!-- <form id="ticketsForm" ref="myForm" v-kendo-validator @submit.prevent="onSubmit">
-                <input type="search"
-                    id="search"
-                    name="search"
-                    required
-                    validationMessage="Field is required"
-                    class="k-textbox" />
-
-                <div>
-                    <button class="k-button k-primary" type="submit">Submit</button>
-                </div>
-            </form> -->
         </div>
     </div>
   </div>

@@ -1,5 +1,4 @@
 import kendo from '@progress/kendo-ui'
-// import * as jsonObj from'./contractCategoryData.json'
 
 export default {
     name: "contract-category",
@@ -20,7 +19,7 @@ export default {
                 Discontinued: { type: 'boolean' },
                 UnitsInStock: { type: 'number', validation: { min: 0, required: true } }
             },       
-            // contractCategoryDataSource: jsonObj
+            contractCategoryDataSource: []
            
         }
     },
@@ -30,30 +29,13 @@ export default {
                 return { models: kendo.stringify(options.models) }
             }
         }
+        // create: function() {
+        //     alert('saraaa')
+        // }
     },
     computed: {
         getEnNames() {
-            let englishName = this.contractCategoryDataSource.map(dataSet => dataSet[0].EnName)
-            this.$root.$emit('getEnglishName', englishName)
-        },
-        contractCategoryDataSource() {
-            
-            return {
-                transport: {
-                    read: function(options) {
-                      options.success([
-                        {
-                            "ContractID": 1,
-                            "Code": 45,
-                            "EnName": "Sara",
-                            "ArName": "سارة",
-                            "Description": "Bla bla bla bla",
-                            "ActivationStatus": false
-                        }
-                    ]);
-                    }
-                }
-            }
+            return this.contractCategoryDataSource.map(dataSet => dataSet[0].EnName)
         }
     },
     mounted() {
