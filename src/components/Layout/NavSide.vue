@@ -23,8 +23,13 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Billing</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Page 1</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-data.html">Page 2</a></li>
+                            <li>
+                                <i class="fa fa-table"></i>
+                                <router-link :to="'/contract-category'">Contract Category</router-link>
+                            </li>
+                            <li><i class="fa fa-table"></i>
+                                <router-link :to="'/contract-list'">Contract List</router-link>
+                            </li>
                         </ul>
                     </li>
                 </ul>
