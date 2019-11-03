@@ -9,6 +9,9 @@ const Login = () => import('../modules/login/LoginForm.vue')
 const Dashboard = () => import('../modules/dashboard/DashboardMainPage.vue')
 const CreateNewUser = () => import('../modules/admin/users/CreateNewUser.vue')
 const UsersList = () => import('../modules/admin/users/UsersList.vue')
+// Billing Routes
+const ContractCategory = () => import('../modules/billing/contract-category/ContractCategory.vue')
+const ContractList = () => import('../modules/billing/contract-list/ContractList.vue')
 
 const routes = [
   {
@@ -31,12 +34,17 @@ const routes = [
     path: '/user-list',
     name: 'user-list',
     component: UsersList
+  },
+  {
+    path: '/contract-category',
+    name: 'contract-category',
+    component: ContractCategory
+  },
+  {
+    path: '/contract-list',
+    name: 'contract-list',
+    component: ContractList
   }
-  // {
-  //   path: '/admin',
-  //   name: 'admin-id',
-  //   component: Admin
-  // }
 ]
 
 const router = new VueRouter({
