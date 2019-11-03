@@ -1,8 +1,9 @@
 <template>
-  <div class="sufee-login d-flex align-content-center flex-wrap">
+  <div class="sufee-login d-flex flex-wrap">
     <div class="container">
       <slot />
     </div>
+    <div class="clear"></div>
   </div>
 </template>
 
