@@ -1,6 +1,8 @@
 <template>
     <div id="contract-list">
-        <kendo-grid :data-source="contractCategoryDataSource"
+        <div class="mt-3 alert alert-secondary">{{frombrother}}</div>
+
+        <kendo-grid :data-source="formData"
                     :pageable="true"
                     :editable="true">
         <div class="k-header k-grid-toolbar">
@@ -12,11 +14,11 @@
                                 :title="'Code'"
                                 :width="100">
             </kendo-grid-column>
-            <kendo-grid-column :field="'EnName'"
+            <kendo-grid-column :field="'EnglishName'"
                                 :title="'English Name'"
                                 :width="200">
             </kendo-grid-column>
-            <kendo-grid-column :field="'ArName'"
+            <kendo-grid-column :field="'ArabicName'"
                                 :title="'Arabic Name'"
                                 :width="200">
             </kendo-grid-column>

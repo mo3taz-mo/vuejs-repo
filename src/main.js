@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
 import Vuex from 'vuex'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 //scss
 import './theme/style.css'
@@ -26,7 +28,8 @@ Vue.use(Vuex)
 Vue.use(GridInstaller)
 Vue.use(InputsInstaller)
 Vue.use(ValidatorInstaller)
-Vue.use(DropdownsInstaller);
+Vue.use(DropdownsInstaller)
+Vue.use(VueAxios, axios)
 
 Vue.component(
   //kendo starts
@@ -68,6 +71,7 @@ Vue.config.productionTip = false
 global.jQuery = require('jquery');
 var $ = global.jQuery;
 window.$ = $;
+
 
 new Vue({
   router,
