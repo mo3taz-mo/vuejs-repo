@@ -1,20 +1,5 @@
 <template>
     <div id="contract-category">
-        <!-- <kendo-datasource ref="contractCategoryDataSource"
-                      :transport-read-url="'https://demos.telerik.com/kendo-ui/service/Products'"
-                      :transport-read-data-type="'jsonp'"
-                      :transport-update-url="'https://demos.telerik.com/kendo-ui/service/Products/Update'"
-                      :transport-update-data-type="'jsonp'"
-                      :transport-destroy-url="'https://demos.telerik.com/kendo-ui/service/Products/Destroy'"
-                      :transport-destroy-data-type="'jsonp'"
-                      :transport-create-url="'https://demos.telerik.com/kendo-ui/service/Products/Create'"
-                      :transport-create-data-type="'jsonp'"
-                      :transport-parameter-map="parameterMap"
-                      :schema-model-id="'ContractID'"
-                      :schema-model-fields="schemaModelFields"
-                      :batch='true'
-                      :page-size='20'>
-        </kendo-datasource> -->
         <kendo-grid :data-source="contractCategoryDataSource"
                     :pageable="true"
                     :editable="true"
