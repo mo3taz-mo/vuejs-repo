@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@progress/kendo-dateinputs-vue-wrapper": "^2019.3.1023",
+    "@progress/kendo-dropdowns-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-grid-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-inputs-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-theme-default": "^4.6.0",

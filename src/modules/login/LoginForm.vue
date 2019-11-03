@@ -30,18 +30,6 @@
                 </div>
                 <button class="btn btn-primary btn-flat m-b-30 m-t-30" type="submit">Sign in</button>
             </form>
-            <!-- <form id="ticketsForm" ref="myForm" v-kendo-validator @submit.prevent="onSubmit">
-                <input type="search"
-                    id="search"
-                    name="search"
-                    required
-                    validationMessage="Field is required"
-                    class="k-textbox" />
-
-                <div>
-                    <button class="k-button k-primary" type="submit">Submit</button>
-                </div>
-            </form> -->
         </div>
     </div>
   </div>
