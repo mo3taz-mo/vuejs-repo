@@ -6,10 +6,10 @@
             <div class="footer-inner bg-white">
                 <div class="row">
                     <div class="col-sm-6">
-                        Copyright &copy; 2018 Ela Admin
+                        Copyright &copy; 2019 Andalusia
                     </div>
                     <div class="col-sm-6 text-right">
-                        Designed by <a href="https://colorlib.com">Colorlib</a>
+                        HMIS Demo
                     </div>
                 </div>
             </div>
@@ -25,5 +25,9 @@
 </script>
 
 <style lang="scss" scoped>
-    
+    #app-footer{
+        position: fixed;
+        bottom: 0;
+        width: 82%;
+    }
 </style>
