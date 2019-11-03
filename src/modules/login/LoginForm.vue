@@ -10,21 +10,21 @@
             <form  ref="myForm" v-kendo-validator @submit.prevent="onSubmit">
                 <div class="form-group">
                     <label>Uersname</label>
-                    <input type="text" 
+                    <input type="text"
                             id="username"
                             name="username"
-                            class="k-textbox form-control" 
-                            placeholder="Uersname" 
+                            class="k-textbox form-control"
+                            placeholder="Uersname"
                             required
                             validationMessage="Field is required">
                 </div>
                 <div class="form-group">
                     <label>password</label>
-                    <input type="password" 
+                    <input type="password"
                             id="password"
                             name="password"
-                            class="k-textbox form-control" 
-                            placeholder="Password" 
+                            class="k-textbox form-control"
+                            placeholder="Password"
                             required
                             validationMessage="Field is required">
                 </div>

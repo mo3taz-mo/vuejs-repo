@@ -1,16 +1,16 @@
-
 export default {
     name: 'login-id',
-      methods: {
-        onSubmit: function () {
-            var validator = this.kendoValidator
+    methods: {
+        onSubmit: function() {
+            var validator = this.kendoValidator;
             if (validator.validate()) {
-              this.$router.push("/dashboard");
-            } 
+                this.$router.push('/dashboard');
+            }
         }
     },
     data: () => ({
-      username: '',
-      password: ''
+        username: '',
+        password: ''
     }),
-  }
+    directives: {}
+};
