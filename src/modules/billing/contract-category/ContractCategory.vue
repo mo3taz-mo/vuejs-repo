@@ -1,7 +1,7 @@
 <template>
     <div id="contract-category">
         <!-- <kendo-datasource ref="contractCategoryDataSource"
-                      :transport-read-url="'https://demos.telerik.com/kendo-ui/service/Products'"
+                      :transport-read-url="'./contractCategoryData.json'"
                       :transport-read-data-type="'jsonp'"
                       :transport-update-url="'https://demos.telerik.com/kendo-ui/service/Products/Update'"
                       :transport-update-data-type="'jsonp'"
@@ -10,15 +10,16 @@
                       :transport-create-url="'https://demos.telerik.com/kendo-ui/service/Products/Create'"
                       :transport-create-data-type="'jsonp'"
                       :transport-parameter-map="parameterMap"
-                      :schema-model-id="'ContractID'"
+                      :schema-model-id="'ProductID'"
                       :schema-model-fields="schemaModelFields"
                       :batch='true'
                       :page-size='20'>
         </kendo-datasource> -->
+
         <kendo-grid :data-source="contractCategoryDataSource"
+                    :editable="'inline'"
                     :pageable="true"
-                    :editable="true"
-                    :toolbar="['create', 'save', 'cancel']">
+                    :toolbar="['create']">
             <kendo-grid-column :field="'Code'"
                                 :title="'Code'"
                                 :width="100">
@@ -36,10 +37,9 @@
                                 :width="250">
             </kendo-grid-column>
             <kendo-grid-column :field="'ActivationStatus'" :width="120"></kendo-grid-column>
-            <kendo-grid-column :command="['destroy']"
+            <kendo-grid-column :command="['edit', 'destroy']"
                                 :title="'&nbsp;'"
-                                :width="100">
-            </kendo-grid-column>
+                                :width="180"></kendo-grid-column>
         </kendo-grid>
     </div>
 </template>

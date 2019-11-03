@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
 import Vuex from 'vuex'
+import store from './store'
 
 //scss
 import './theme/style.css'
@@ -14,9 +15,11 @@ import NoBars from './components/Layout/NoBars.vue'
 
 //kendo
 import '@progress/kendo-ui'
+import '@progress/kendo-base-components-vue-wrapper'
 import '@progress/kendo-theme-default/dist/all.css'
 import { Calendar } from '@progress/kendo-dateinputs-vue-wrapper'
 import { Grid, GridInstaller } from '@progress/kendo-grid-vue-wrapper'
+import { DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
 import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapper'
 import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper'
 
@@ -28,6 +31,7 @@ import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wra
 
 Vue.use(Vuex)
 Vue.use(GridInstaller)
+Vue.use(DataSourceInstaller);
 Vue.use(InputsInstaller)
 Vue.use(ValidatorInstaller)
 // Vue.use(Vuelidate)
@@ -48,6 +52,7 @@ Vue.component(
   Validator.name,
   ValidatorInstaller,
   ValidatorInstaller.name,
+  DataSourceInstaller
   //kendo ends
   //form validation starts
   //Vuelidate,
@@ -70,6 +75,7 @@ window.$ = $;
 new Vue({
   router,
   i18n,
+  store,
   render: h => h(App),
 
   components: {
@@ -79,6 +85,6 @@ new Vue({
     GridInstaller,
     MaskedTextBox, 
     InputsInstaller,
-    
+    DataSourceInstaller
   }
 }).$mount('#app')
