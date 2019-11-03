@@ -14,6 +14,7 @@ import Default from './components/Layout/Default.vue';
 import NoBars from './components/Layout/NoBars.vue';
 
 //kendo
+//<<<<<<< HEAD
 import '@progress/kendo-ui';
 import '@progress/kendo-theme-default/dist/all.css';
 import { Calendar } from '@progress/kendo-dateinputs-vue-wrapper';
@@ -60,6 +61,55 @@ Vue.component(
     //Vuelidate,
     //form validation ends
     //bootstrap starts
+=======
+import '@progress/kendo-ui'
+import '@progress/kendo-theme-default/dist/all.css'
+import { Calendar } from '@progress/kendo-dateinputs-vue-wrapper'
+import { Grid, GridInstaller } from '@progress/kendo-grid-vue-wrapper'
+import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapper'
+import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper'
+import { AutoComplete,  ComboBox,  DropDownList,  MultiSelect,
+         MultiColumnComboBox,  MultiColumnComboBoxColumn,  DropdownsInstaller } from '@progress/kendo-dropdowns-vue-wrapper'
+
+Vue.use(Vuex)
+Vue.use(GridInstaller)
+Vue.use(InputsInstaller)
+Vue.use(ValidatorInstaller)
+Vue.use(DropdownsInstaller);
+
+Vue.component(
+  //kendo starts
+  Calendar.name,
+  Calendar,
+  Grid.name,
+  Grid,
+  GridInstaller.name,
+  GridInstaller,
+  MaskedTextBox.name,
+  InputsInstaller.name,
+  MaskedTextBox,
+  InputsInstaller,
+  Validator,
+  Validator.name,
+  ValidatorInstaller,
+  ValidatorInstaller.name,
+  AutoComplete,
+  ComboBox,
+  DropDownList,
+  MultiSelect,
+  MultiColumnComboBox,
+  MultiColumnComboBoxColumn
+  //kendo ends
+  //form validation starts
+  //Vuelidate,
+  //form validation ends
+  //bootstrap starts
+
+  //bootstrap ends
+)
+Vue.component('default-layout', Default)
+Vue.component('no-bars-layout', NoBars)
+>>>>>>> 1edb313ce6be6faab47cace0ea9fe122218d826e
 
     //bootstrap ends
 );

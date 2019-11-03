@@ -12,6 +12,7 @@ const UsersList = () => import('../modules/admin/users/UsersList.vue')
 // Billing Routes
 const ContractCategory = () => import('../modules/billing/contract-category/ContractCategory.vue')
 const ContractList = () => import('../modules/billing/contract-list/ContractList.vue')
+const AddContractList = () => import('../modules/billing/contract-list/AddContractList.vue')
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
     path: '/contract-list',
     name: 'contract-list',
     component: ContractList
+  },
+  {
+    path: '/add-contract-list',
+    name: 'add-contract-list',
+    component: AddContractList
   }
 ]
 
