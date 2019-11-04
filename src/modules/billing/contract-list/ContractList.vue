@@ -1,10 +1,16 @@
 <template>
     <div id="contract-list">
         <div class="mt-3 alert alert-secondary"></div>
-        <kendo-grid :data-source="formData"
+        <kendo-datasource ref="datasource" 
+                            :data="formData"
+                            :page-size="10"></kendo-datasource>
+        <kendo-grid :data-source-ref="'datasource'"
                     :pageable="true"
                     :editable="true"
-                    id="grid">
+                    :no-records="true"
+                    :sortable="true"
+                    id="grid"
+                    @databinding="bindData">
         <div class="k-header k-grid-toolbar">
             <router-link :to="'/add-contract-list'" class="k-button k-button-icontext k-grid-add">
                 <span class="k-icon k-i-plus"></span>Add new record
@@ -27,7 +33,7 @@
                                 :width="250">
             </kendo-grid-column>
             <kendo-grid-column :field="'ActivationStatus'" :width="120"></kendo-grid-column>
-            <kendo-grid-column :command="['destroy']"
+            <kendo-grid-column :command="[{text: 'Delete', click: deleteHandler }]"
                                 :title="'&nbsp;'"
                                 :width="100">
             </kendo-grid-column>

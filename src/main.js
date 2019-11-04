@@ -20,7 +20,7 @@ import '@progress/kendo-ui'
 import '@progress/kendo-base-components-vue-wrapper'
 import '@progress/kendo-theme-default/dist/all.css'
 import { Calendar, DatePicker, DateinputsInstaller } from '@progress/kendo-dateinputs-vue-wrapper'
-import { Grid, GridInstaller } from '@progress/kendo-grid-vue-wrapper'
+import { GridInstaller } from '@progress/kendo-grid-vue-wrapper'
 import { DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
 import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapper'
 import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper'
@@ -29,6 +29,7 @@ import { AutoComplete,  ComboBox,  DropDownList,  MultiSelect,
 import { TreeView, TreeViewItem, TreeViewInstaller } from '@progress/kendo-treeview-vue-wrapper'
 import { DropDownTree, DropDownTreeInstaller } from '@progress/kendo-dropdowntree-vue-wrapper'
 import { Upload, UploadInstaller } from '@progress/kendo-upload-vue-wrapper'
+import { Grid } from '@progress/kendo-vue-grid'
 
 Vue.use(Vuex)
 Vue.use(GridInstaller)
@@ -80,6 +81,8 @@ Vue.component(
 )
 Vue.component('default-layout', Default)
 Vue.component('no-bars-layout', NoBars)
+
+Vue.component('Grid', Grid);
 
 
 Vue.config.productionTip = false
