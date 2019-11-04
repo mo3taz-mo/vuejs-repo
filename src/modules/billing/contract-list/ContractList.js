@@ -14,9 +14,7 @@ export default {
     },
     created() {
         EventBus.$on('update-data', receivedData => {
-            console.log(receivedData);
             this.formData.push(receivedData);
-            console.log(this.formData.length)
         });
     },
 }

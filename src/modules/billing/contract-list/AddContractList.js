@@ -8,9 +8,10 @@ export default {
                 EventBus.$emit('update-data', formData);
                 this.$router.push("/contract-list");
             } 
-        },
+        }
     },
     data: () => ({
+        IsSelectedTypes: false,
         formData: {
             Code: '',
             EnglishName: '',
@@ -44,7 +45,16 @@ export default {
                     ]
                 }]
             }),
+            types: 'All',
             SelectedTypes: new kendo.data.HierarchicalDataSource({
+                data: [{
+                    text: 'Furniture'
+                },{
+                    text: 'Decor'
+                }]
+            }),
+            Clients:'AllClients',
+            SelectedClients: new kendo.data.HierarchicalDataSource({
                 data: [{
                     text: 'Furniture'
                 },{
@@ -53,4 +63,24 @@ export default {
             })
         },  
     }),
+    mounted: function () {
+        /*
+            The code in this function is only added to simulate a successful upload request for this demo.
+            Do not use the code in other cases when working with the Upload component.
+        */
+        var upload = this.$refs.upload.kendoWidget();
+
+        upload._module.postFormData = function (url, data, fileEntry, xhr) {
+            var module = this;
+            fileEntry.data("request", xhr);
+            setTimeout(function () {
+                var e = { target: { responseText: '', statusText: "OK", status: 200 } };
+                module.onRequestSuccess.call(module, e, fileEntry);
+            }, 1000);
+        };
+
+        upload._submitRemove = function () {
+            onSuccess();
+        };
+    }
 }

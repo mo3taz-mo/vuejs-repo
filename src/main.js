@@ -28,6 +28,7 @@ import { AutoComplete,  ComboBox,  DropDownList,  MultiSelect,
          MultiColumnComboBox,  MultiColumnComboBoxColumn,  DropdownsInstaller } from '@progress/kendo-dropdowns-vue-wrapper'
 import { TreeView, TreeViewItem, TreeViewInstaller } from '@progress/kendo-treeview-vue-wrapper'
 import { DropDownTree, DropDownTreeInstaller } from '@progress/kendo-dropdowntree-vue-wrapper'
+import { Upload, UploadInstaller } from '@progress/kendo-upload-vue-wrapper'
 
 Vue.use(Vuex)
 Vue.use(GridInstaller)
@@ -39,6 +40,7 @@ Vue.use(VueAxios, axios)
 Vue.use(DateinputsInstaller)
 Vue.use(TreeViewInstaller)
 Vue.use(DropDownTreeInstaller)
+Vue.use(UploadInstaller)
 
 Vue.component(
   //kendo starts
@@ -66,7 +68,8 @@ Vue.component(
   DatePicker,
   TreeView,
   TreeViewItem,
-  DropDownTree
+  DropDownTree,
+  Upload
   //kendo ends
   //form validation starts
   //Vuelidate,
