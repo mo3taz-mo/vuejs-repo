@@ -14,9 +14,11 @@
     "@progress/kendo-datasource-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-dateinputs-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-dropdowns-vue-wrapper": "^2019.3.1023",
+    "@progress/kendo-dropdowntree-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-grid-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-inputs-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-theme-default": "^4.6.0",
+    "@progress/kendo-treeview-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-ui": "^2019.3.1023",
     "@progress/kendo-validator-vue-wrapper": "^2019.3.1023",
     "axios": "^0.19.0",
@@ -53,7 +55,8 @@
       "eslint:recommended"
     ],
     "rules": {
-      "no-console": "off"
+      "no-console": "off",
+      "no-undef": "off"
     },
     "parserOptions": {
       "parser": "babel-eslint"

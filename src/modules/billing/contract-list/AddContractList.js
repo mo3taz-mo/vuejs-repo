@@ -16,15 +16,41 @@ export default {
             EnglishName: '',
             ArabicName:'',
             Description:'',
-            dataSourceArray: [
-                { text: 'Albania', value: '1' },
-                { text: 'Andorra', value: '2' },
-                { text: 'Armenia', value: '3' },
-                { text: 'Austria', value: '4' },
-                { text: 'Azerbaijan', value: '5' },
-                { text: 'Belarus', value: '6' },
-                { text: 'Belgium', value: '7' }
-            ]
+            ContractType: [
+                { text: 'Credit', value: '1' },
+                { text: 'Cash', value: '2' }
+            ],
+            AccommodationClass: [
+                { text: 'Class A', value: '1' },
+                { text: 'Class B', value: '2' }
+            ],
+            ContractCategory:[],
+            ItemPriceList:[],
+            ServicePriceList:[],
+            currentDate: new Date(),
+            ContractorTree: new kendo.data.HierarchicalDataSource({
+                data: [{
+                    text: 'R_contractor',
+                    items: [
+                        { text: 'Qlm' },
+                        { text: 'Qiuck and quality' },
+                        { text: 'Q.n.b life insurance' }
+                    ]
+                }, {
+                    text: 'Platinum card',
+                    items: [
+                        { text: 'Planet -gym' },
+                        { text: 'Pirelli checkup for employees' }
+                    ]
+                }]
+            }),
+            SelectedTypes: new kendo.data.HierarchicalDataSource({
+                data: [{
+                    text: 'Furniture'
+                },{
+                    text: 'Decor'
+                }]
+            })
         },  
     }),
 }

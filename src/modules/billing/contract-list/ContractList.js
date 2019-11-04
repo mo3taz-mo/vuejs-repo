@@ -10,8 +10,6 @@ export default {
                 Description:'Bla bla bla bla',
                 ActivationStatus: false
             }], 
-            thecardtitle: 'Child Component!',
-            frombrother: ''
         }
     },
     created() {

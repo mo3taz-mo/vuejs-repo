@@ -19,13 +19,15 @@ import NoBars from './components/Layout/NoBars.vue'
 import '@progress/kendo-ui'
 import '@progress/kendo-base-components-vue-wrapper'
 import '@progress/kendo-theme-default/dist/all.css'
-import { Calendar } from '@progress/kendo-dateinputs-vue-wrapper'
+import { Calendar, DatePicker, DateinputsInstaller } from '@progress/kendo-dateinputs-vue-wrapper'
 import { Grid, GridInstaller } from '@progress/kendo-grid-vue-wrapper'
 import { DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
 import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapper'
 import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper'
 import { AutoComplete,  ComboBox,  DropDownList,  MultiSelect,
          MultiColumnComboBox,  MultiColumnComboBoxColumn,  DropdownsInstaller } from '@progress/kendo-dropdowns-vue-wrapper'
+import { TreeView, TreeViewItem, TreeViewInstaller } from '@progress/kendo-treeview-vue-wrapper'
+import { DropDownTree, DropDownTreeInstaller } from '@progress/kendo-dropdowntree-vue-wrapper'
 
 Vue.use(Vuex)
 Vue.use(GridInstaller)
@@ -34,6 +36,9 @@ Vue.use(InputsInstaller)
 Vue.use(ValidatorInstaller)
 Vue.use(DropdownsInstaller)
 Vue.use(VueAxios, axios)
+Vue.use(DateinputsInstaller)
+Vue.use(TreeViewInstaller)
+Vue.use(DropDownTreeInstaller)
 
 Vue.component(
   //kendo starts
@@ -57,7 +62,11 @@ Vue.component(
   DropDownList,
   MultiSelect,
   MultiColumnComboBox,
-  MultiColumnComboBoxColumn
+  MultiColumnComboBoxColumn,
+  DatePicker,
+  TreeView,
+  TreeViewItem,
+  DropDownTree
   //kendo ends
   //form validation starts
   //Vuelidate,

@@ -3,7 +3,8 @@
         <div class="mt-3 alert alert-secondary"></div>
         <kendo-grid :data-source="formData"
                     :pageable="true"
-                    :editable="true">
+                    :editable="true"
+                    id="grid">
         <div class="k-header k-grid-toolbar">
             <router-link :to="'/add-contract-list'" class="k-button k-button-icontext k-grid-add">
                 <span class="k-icon k-i-plus"></span>Add new record
