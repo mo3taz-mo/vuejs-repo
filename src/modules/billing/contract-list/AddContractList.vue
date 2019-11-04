@@ -1,6 +1,6 @@
 <template>
     <div id="add-contract-list">
-        <form  ref="myForm" v-kendo-validator @submit.prevent="onSubmit">
+        <form  ref="myForm" v-kendo-validator @submit.prevent="onSubmit(formData)">
             <div class="row">
                 <div class="form-group col">
                     <kendo-dropdownlist :data-source="formData.dataSourceArray"

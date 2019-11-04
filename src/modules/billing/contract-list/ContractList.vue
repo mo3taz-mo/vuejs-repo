@@ -1,7 +1,6 @@
 <template>
     <div id="contract-list">
-        <div class="mt-3 alert alert-secondary">{{frombrother}}</div>
-
+        <div class="mt-3 alert alert-secondary"></div>
         <kendo-grid :data-source="formData"
                     :pageable="true"
                     :editable="true">

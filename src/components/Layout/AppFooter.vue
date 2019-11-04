@@ -19,15 +19,15 @@
 
 <script>
   export default {
-    name: 'footer',
+    name: 'app-footer',
     
   }
 </script>
 
 <style lang="scss" scoped>
-    #app-footer{
+    /*#app-footer{
         position: fixed;
         bottom: 0;
         width: 82%;
-    }
+    }*/
 </style>

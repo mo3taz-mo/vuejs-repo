@@ -15,8 +15,10 @@ export default {
         }
     },
     created() {
-        EventBus.$on('i-got-clicked', clickCount => {
-            alert(clickCount)
+        EventBus.$on('update-data', receivedData => {
+            console.log(receivedData);
+            this.formData.push(receivedData);
+            console.log(this.formData.length)
         });
-    }
+    },
 }

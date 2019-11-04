@@ -2,10 +2,10 @@ import { EventBus } from '@/services/event-bus.js';
 export default {
     name: "add-contract-list",
     methods: {
-        onSubmit: function () {
+        onSubmit: function (formData) {
             var validator = this.kendoValidator
             if (validator.validate()) {
-                EventBus.$emit('i-got-clicked', this.formData.EnglishName);
+                EventBus.$emit('update-data', formData);
                 this.$router.push("/contract-list");
             } 
         },
