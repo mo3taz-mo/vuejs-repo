@@ -191,7 +191,7 @@
                         <!--Description-->
                         <label class="col-sm-4 col-form-label">Description</label>
                         <div class="col-sm-7">
-                            <textarea rows="3" cols="4" v-model="formData.Description" type="text" class="k-input k-textbox "></textarea>
+                            <textarea rows="3" cols="4"  type="text" class="k-input k-textbox "></textarea>
                         </div> 
                     </div>
                 </div>
