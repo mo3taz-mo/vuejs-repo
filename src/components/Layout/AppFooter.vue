@@ -25,9 +25,10 @@
 </script>
 
 <style lang="scss" scoped>
-    /*#app-footer{
+    #app-footer{
         position: fixed;
         bottom: 0;
         width: 82%;
-    }*/
+        z-index: 2;
+    }
 </style>
