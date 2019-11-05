@@ -1,8 +1,9 @@
 <template>
     <div id="contract-list">
         <kendo-datasource ref="datasource" 
-                            :data="formData"
-                            :page-size="10"></kendo-datasource>
+                          :data="formData"
+                          :page-size="10">
+        </kendo-datasource>
         <kendo-grid :data-source-ref="'datasource'"
                     :pageable="true"
                     :editable="true"
