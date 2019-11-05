@@ -2,6 +2,8 @@
     <div id="contract-category">
         <kendo-datasource ref="dataSourceRef"
                         :transport-read="contractCategoryDataSource"
+                        :transport-create="createdDataSource"
+                        :transport-update="updatedDataSource"
                         :schema-model-id="'ContractID'"
                         :schema-model-fields="schemaModelFields"
                         :batch='true'
@@ -10,10 +12,15 @@
 
         <kendo-grid :data-source-ref="'dataSourceRef'"
                     :editable="'inline'"
-                    :pageable="true"
+                    :pageable-refresh='true'
+                    :pageable-page-size='20'
+                    :pageable-page-sizes='true'
+                    :pageable-button-count='5'
                     :no-records="true"
                     :sortable="true"
-                    :toolbar="['create']">
+                    :filterable-row='true'
+                    :toolbar="['create']"
+                    @databinding="onDataBinding">
             <kendo-grid-column :field="'Code'"
                                 :title="'Code'"
                                 :width="100">

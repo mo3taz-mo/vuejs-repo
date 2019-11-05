@@ -12,7 +12,7 @@ export default {
             },    
             contractCategoryList: [
                 {
-                    "ContractID": 2,
+                    "ContractID": 1,
                     "Code": 99,
                     "EnName": "Sara",
                     "ArName": "سارة",
@@ -20,7 +20,7 @@ export default {
                     "ActivationStatus": true
                 },
                 {
-                    "ContractID": 1,
+                    "ContractID": 2,
                     "Code": 45,
                     "EnName": "Sara",
                     "ArName": "سارة",
@@ -38,12 +38,29 @@ export default {
         deleteHandler: function(e) {
             e.preventDefault();
             $(e.currentTarget).closest("tr").remove();
-
+            // slice this index from _data
+        },
+        createdDataSource: function(e) {
+            let ss = this.$refs.dataSourceRef.kendoWidget()
+            e.success(ss._data[0])
+            this.contractCategoryList = ss._data;
+        },
+        updatedDataSource: function(e) {
+            let ss = this.$refs.dataSourceRef.kendoWidget()
+            e.success(ss._data[0])
+            this.contractCategoryList = ss._data;
+        },
+        onDataBinding: function() {
+            
         }
     },
     computed: {
         getEnNames() {
-            return this.contractCategoryDataSource.map(dataSet => dataSet[0].EnName)
+            let names = this.contractCategoryList.map(dataItem => dataItem.EnName)
+            EventBus.$emit('setEnNamesInDdl', names);
         }
+    },
+    mounted: function () {
+        
     }
 }
