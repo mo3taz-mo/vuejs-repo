@@ -1,3 +1,12 @@
 {
-  "message": "اهلا وسهلا"
+  "message": "اهلا وسهلا",
+  "English": "الانجليزية",
+  "Arabic": "العربية",
+  "Dashboard": "الرئيسية",
+  "Admin": "الادمن",
+  "CreateNewUser": "اضافة مستخدم جديد",
+  "UsersList": "قائمة المستخدمين",
+  "Billing": "الفواتير",
+  "ContractCategory": "تصنيفات العقود",
+  "ContractList": "قائمة العقود"
 }
