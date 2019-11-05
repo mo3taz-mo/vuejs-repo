@@ -1,9 +1,12 @@
 // Make sure to call Vue.use(Vuex) first if using a module system
 import router from './router';
+import Vue from 'vue'
+import Vuex from 'vuex'
 router.push('/dashboard');
 
+Vue.use(Vuex)
 
-const store = new Vuex.Store({
+export default new Vuex.Store({
     state: {
       count: 0
     },

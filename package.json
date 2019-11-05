@@ -10,13 +10,23 @@
     "randa": "vue-cli-service serve"
   },
   "dependencies": {
+    "@progress/kendo-base-components-vue-wrapper": "^2019.3.1023",
+    "@progress/kendo-data-query": "^1.5.2",
+    "@progress/kendo-datasource-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-dateinputs-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-dropdowns-vue-wrapper": "^2019.3.1023",
+    "@progress/kendo-dropdowntree-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-grid-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-inputs-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-theme-default": "^4.6.0",
+    "@progress/kendo-treeview-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-ui": "^2019.3.1023",
+    "@progress/kendo-upload-vue-wrapper": "^2019.3.1023",
     "@progress/kendo-validator-vue-wrapper": "^2019.3.1023",
+    "@progress/kendo-vue-animation": "^0.3.7",
+    "@progress/kendo-vue-grid": "^0.3.7",
+    "@progress/kendo-vue-intl": "^0.3.7",
+    "@progress/kendo-vue-popup": "^0.3.7",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.4",
@@ -50,7 +60,11 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off",
+      "no-undef": "off",
+      "no-debugger": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
