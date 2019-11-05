@@ -9,6 +9,12 @@ body, html{
     .right-panel{
         height: 100vh;
     }
+    .mt0{
+        margin-top: 0;
+    }
+    .mb0{
+        margin-bottom: 0;
+    }
 }
 #app{
     height: 100%;
@@ -19,23 +25,31 @@ form{
     .k-multiselect, .k-numerictextbox, 
     .k-maskedtextbox, .k-timepicker, .k-dropdowntree{
         width: 100%;
-        .k-dropdown .k-dropdown-wrap:hover, .k-dropdown .k-dropdown-wrap.k-state-hover{
-            background: none;
-            border: none;
-            border-bottom: 2px solid #ccc;
-        }
     }
     .col-form-label{
         text-align: right;
         font-size: 13px;
         padding-right: 0;
         line-height: 15px;
+        span{
+            color: #f31700;
+        }
     }
-    .form-control, input:-internal-autofill-selected{
+    .form-control, 
+    input:-internal-autofill-selected,
+    .k-dropdown .k-dropdown-wrap,    
+    .k-dropdown .k-dropdown-wrap:hover, 
+    .k-dropdown .k-dropdown-wrap.k-state-hover, 
+    .k-dropdown .k-dropdown-wrap.k-state-focused, 
+    .k-dropdown .k-dropdown-wrap.k-state-active,
+    .k-datepicker .k-picker-wrap,
+    .k-widget.k-dropdowntree {
         border: none;
         background: transparent;
         border-bottom: 2px solid #c5c5c5;
-        padding: 0 .5rem;
+        padding: 0;
+        box-shadow: none;
+        outline: none;
         &:focus{
             background: transparent;
             box-shadow: none;
