@@ -32,7 +32,8 @@ export default {
             EventBus.$on('update-data', (receivedData) => {
                 this.formData.push(receivedData);
                 console.log(this.formData);
-                var dataSource = new kendo.data.DataSource({ data: this.formData });dataSource.read();
+                var dataSource = new kendo.data.DataSource({ data: this.formData });
+                dataSource.read();
                 // var gantt = this.$refs.gantt.kendoWidget();            
                 // gantt.formData.add(receivedData)
             });

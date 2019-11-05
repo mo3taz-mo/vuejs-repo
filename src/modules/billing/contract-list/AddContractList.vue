@@ -30,6 +30,7 @@
                                     class="k-textbox form-control form-control-sm" 
                                     placeholder="English Name" 
                                     required
+                                    v-only-en
                                     validationMessage="Field is required"
                                     onlyEn>
                         </div>

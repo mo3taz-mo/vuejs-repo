@@ -1,4 +1,5 @@
 import { EventBus } from '@/services/event-bus.js';
+import { onlyEn } from '@/directives/InputHelpers.js'
 export default {
     name: "add-contract-list",
     methods: {
@@ -82,5 +83,8 @@ export default {
         upload._submitRemove = function () {
             onSuccess();
         };
-    }
+    },
+    directives: {
+        onlyEn
+    },
 }
