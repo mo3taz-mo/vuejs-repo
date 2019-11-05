@@ -2,8 +2,9 @@
     <div id="contract-list">
         <div class="mt-3 alert alert-secondary"></div>
         <kendo-datasource ref="datasource" 
-                            :data="formData"
-                            :page-size="10"></kendo-datasource>
+                          :data="formData"
+                          :page-size="10">
+        </kendo-datasource>
         <kendo-grid :data-source-ref="'datasource'"
                     :pageable="true"
                     :editable="true"

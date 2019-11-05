@@ -18,14 +18,9 @@ import '@progress/kendo-ui';
 import '@progress/kendo-theme-default/dist/all.css';
 import { Calendar } from '@progress/kendo-dateinputs-vue-wrapper';
 import { Grid, GridInstaller } from '@progress/kendo-grid-vue-wrapper';
-import {
-    MaskedTextBox,
-    InputsInstaller
-} from '@progress/kendo-inputs-vue-wrapper';
-import {
-    Validator,
-    ValidatorInstaller
-} from '@progress/kendo-validator-vue-wrapper';
+import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapper';
+import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper';
+// import { DataSource, DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
 
 //form validation
 // import Vuelidate from 'vuelidate'
@@ -38,6 +33,7 @@ Vue.use(InputsInstaller);
 Vue.use(ValidatorInstaller);
 Vue.use(FlagIcon);
 // Vue.use(Vuelidate)
+// Vue.use(DataSourceInstaller);
 
 Vue.component(
     //kendo starts
@@ -54,7 +50,10 @@ Vue.component(
     Validator,
     Validator.name,
     ValidatorInstaller,
-    ValidatorInstaller.name
+    ValidatorInstaller,
+    // DataSource,
+    // DataSourceInstaller
+    
     //kendo ends
     //form validation starts
     //Vuelidate,
@@ -85,5 +84,6 @@ new Vue({
         GridInstaller,
         MaskedTextBox,
         InputsInstaller
+        
     }
 }).$mount('#app');
