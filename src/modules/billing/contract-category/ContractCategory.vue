@@ -1,8 +1,11 @@
 <template>
     <div id="contract-category">
         <kendo-datasource ref="dataSourceRef"
-                      :data="contractCategoryDataSource"
-                      :page-size='20'>
+                        :transport-read="contractCategoryDataSource"
+                        :schema-model-id="'ContractID'"
+                        :schema-model-fields="schemaModelFields"
+                        :batch='true'
+                        :page-size='20'>
         </kendo-datasource>
 
         <kendo-grid :data-source-ref="'dataSourceRef'"
@@ -28,10 +31,10 @@
                                 :width="250">
             </kendo-grid-column>
             <kendo-grid-column :field="'ActivationStatus'" :width="120"></kendo-grid-column>
-            <kendo-grid-column :command="['edit', 'destroy']"
+            <kendo-grid-column :command="['edit', { text: 'Delete', click: deleteHandler }]"
                                 :title="'&nbsp;'"
                                 :width="180">
-                                </kendo-grid-column>
+            </kendo-grid-column>
         </kendo-grid>
     </div>
 </template>

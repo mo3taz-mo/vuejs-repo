@@ -20,7 +20,7 @@ import { Calendar } from '@progress/kendo-dateinputs-vue-wrapper';
 import { Grid, GridInstaller } from '@progress/kendo-grid-vue-wrapper';
 import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapper';
 import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper';
-// import { DataSource, DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
+import { DataSource, DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
 
 //form validation
 // import Vuelidate from 'vuelidate'
@@ -33,7 +33,7 @@ Vue.use(InputsInstaller);
 Vue.use(ValidatorInstaller);
 Vue.use(FlagIcon);
 // Vue.use(Vuelidate)
-// Vue.use(DataSourceInstaller);
+Vue.use(DataSourceInstaller);
 
 Vue.component(
     //kendo starts
@@ -51,8 +51,8 @@ Vue.component(
     Validator.name,
     ValidatorInstaller,
     ValidatorInstaller,
-    // DataSource,
-    // DataSourceInstaller
+    DataSource,
+    DataSourceInstaller
     
     //kendo ends
     //form validation starts
