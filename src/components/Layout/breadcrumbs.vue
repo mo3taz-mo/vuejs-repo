@@ -32,4 +32,21 @@
   }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+    .right-panel{
+        .breadcrumbs{
+            margin-top: 15px;
+            .breadcrumbs-inner{
+                height: 45px;
+                line-height: 45px;
+                .page-header{
+                    background: none;
+                    h1{
+                        padding: 0;
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+</style>

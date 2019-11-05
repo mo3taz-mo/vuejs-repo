@@ -49,17 +49,17 @@ export default {
             types: 'All',
             SelectedTypes: new kendo.data.HierarchicalDataSource({
                 data: [{
-                    text: 'Furniture'
+                    text: 'Personal'
                 },{
-                    text: 'Decor'
+                    text: 'Family'
                 }]
             }),
             Clients:'AllClients',
             SelectedClients: new kendo.data.HierarchicalDataSource({
                 data: [{
-                    text: 'Furniture'
+                    text: 'Personal'
                 },{
-                    text: 'Decor'
+                    text: 'Family'
                 }]
             })
         },  
@@ -81,7 +81,7 @@ export default {
         };
 
         upload._submitRemove = function () {
-            onSuccess();
+            //onSuccess();
         };
     },
     directives: {

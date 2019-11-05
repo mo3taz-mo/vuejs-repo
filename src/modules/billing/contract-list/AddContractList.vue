@@ -3,9 +3,9 @@
         <form  ref="myForm" v-kendo-validator @submit.prevent="onSubmit(formData)">
             <div class=" row">
                 <div class="col-sm-6">
-                    <div class="form-group row">
+                    <div class="form-group row mt0 mb0">
                         <label class="col-sm-4 col-form-label">Contract Code</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-7 disabled">
                             <input disabled 
                                     type="text" 
                                     id="Code"
@@ -21,7 +21,7 @@
                 <div class="col-sm-6">
                     <div class="form-group row">
                         <!--english name-->
-                        <label class="col-sm-4 col-form-label">Contract English Name</label>
+                        <label class="col-sm-4 col-form-label">Contract English Name<span>*</span></label>
                         <div class="col-sm-7">
                             <input type="text" 
                                     id="EnglishName"
@@ -58,7 +58,7 @@
                         </div>
                         <!--start date-->
                         <label class="col-sm-4 col-form-label">Start Date</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-7">
                             <kendo-datepicker :value="formData.currentDate"
                                             :format="'dd/MM/yyyy'"></kendo-datepicker>
                         </div>
@@ -72,12 +72,12 @@
                         </div>
                         <!--Beneficiary Types-->
                         <label class="col-sm-4 col-form-label">Beneficiary Types</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-7 pt7">
                             <input type="radio" name="SelectedTypes" id="AllTypes" 
                                     class="k-radio" 
                                      v-model="formData.types" 
                                      value="All">
-                            <label for="AllTypes" class="k-radio-label">
+                            <label for="AllTypes" class="k-radio-label mr10">
                                 All Types
                             </label>
                             <input type="radio" name="SelectedTypes" 
@@ -85,25 +85,23 @@
                                     class="k-radio" 
                                     v-model="formData.types" 
                                     value="Selected">
-                            <label for="SelectedTypes" class="k-radio-label">
+                            <label for="SelectedTypes" class="k-radio-label mr10">
                                 Selected Types
                             </label>
                         </div>                                            
-                        <div class="row" v-if="formData.types=== 'Selected'" style="width: 100%;">
+                        <div class="row" v-if="formData.types=== 'Selected'">
                             <label class="col-sm-4 col-form-label">Selected Types</label>
-                            <div class="col-sm-8">
+                            <div class="col-sm-7">
                                 <kendo-dropdowntree :data-source="formData.SelectedTypes"
                                                     :checkboxes="true"
                                                     :check-all="true"
-                                                    :placeholder="'Select ...'"
-                                                    required
-                                                    validationMessage="Field is required">
+                                                    :placeholder="'Select ...'">
                                 </kendo-dropdowntree>
                             </div>
                         </div>
                         <!--file upload-->
                         <label class="col-sm-4 col-form-label">Attachment(s)</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-7">
                             <kendo-upload ref="upload"
                                         name="files"
                                         :async-save-url="'custom-save-url'"
@@ -116,15 +114,15 @@
                 <div class="col-sm-6">
                     <div class="form-group row">
                         <!--arabic name-->
-                        <label class="col-sm-4 col-form-label">Contract Arabic Name</label>
-                        <div class="col-sm-8">
+                        <label class="col-sm-4 col-form-label">Contract Arabic Name<span>*</span></label>
+                        <div class="col-sm-7">
                             <input type="text" id="ArabicName" name="ArabicName" v-model="formData.ArabicName"
                                     class="k-textbox form-control form-control-sm" placeholder="Arabic Name" 
                                     required validationMessage="Field is required" onlyAr>
                         </div>
                         <!--contract type-->
                         <label class="col-sm-4 col-form-label">Contract Type</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-7">
                             <kendo-dropdownlist 
                                     :data-source="formData.ContractType"
                                     :data-text-field="'text'"
@@ -146,7 +144,7 @@
                         </div>
                         <!--end date-->
                         <label class="col-sm-4 col-form-label">End Date</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-7">
                             <kendo-datepicker :value="formData.currentDate"
                                             :format="'dd/MM/yyyy'"></kendo-datepicker>
                         </div>
@@ -163,12 +161,12 @@
                         </div>
                         <!--Contractor Clients-->
                         <label class="col-sm-4 col-form-label">Contractor Clients</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-7 pt7">
                             <input type="radio" name="SelectedClients" id="AllClients" 
                                     class="k-radio" 
                                      v-model="formData.Clients" 
                                      value="AllClients">
-                            <label for="AllClients" class="k-radio-label">
+                            <label for="AllClients" class="k-radio-label mr10">
                                 All Clients
                             </label>
                             <input type="radio" name="SelectedClients" 
@@ -176,33 +174,31 @@
                                     class="k-radio" 
                                     v-model="formData.Clients" 
                                     value="SelectedClients">
-                            <label for="SelectedClients" class="k-radio-label">
+                            <label for="SelectedClients" class="k-radio-label mr10">
                                 Selected Clients
                             </label>
                         </div>                                            
-                        <div class="row" v-if="formData.Clients=== 'SelectedClients'" style="width: 100%;">
+                        <div class="row" v-if="formData.Clients=== 'SelectedClients'">
                             <label class="col-sm-4 col-form-label">Selected Clients</label>
-                            <div class="col-sm-8">
-                                <kendo-dropdowntree :data-source="formData.SelectedTypes"
+                            <div class="col-sm-7">
+                                <kendo-dropdowntree :data-source="formData.SelectedClients"
                                                     :checkboxes="true"
                                                     :check-all="true"
-                                                    :placeholder="'Select ...'"
-                                                    required
-                                                    validationMessage="Field is required">
+                                                    :placeholder="'Select ...'">
                                 </kendo-dropdowntree>
                             </div>
                         </div>
                         <!--Description-->
                         <label class="col-sm-4 col-form-label">Description</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-7">
                             <textarea rows="3" cols="4"  type="text" class="k-input k-textbox "></textarea>
                         </div> 
                     </div>
                 </div>
             </div> 
             <div class="row">
-                <div class="form-group col">
-                    <button class="btn btn-outline-primary btn-sm" type="submit">Add</button>
+                <div class="form-group col-sm-11 p0 mt15">
+                    <button class="btn btn-primary pull-right btn-sm" type="submit">Add</button>
                 </div>
             </div>
         </form>
