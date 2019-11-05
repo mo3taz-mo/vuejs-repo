@@ -80,9 +80,8 @@ Vue.component(
     //Vuelidate,
     //form validation ends
     //bootstrap starts
-
-    //bootstrap ends
 )
+
 Vue.component('default-layout', Default)
 Vue.component('no-bars-layout', NoBars)
 
