@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import i18n from './i18n'
+import i18n from '@/i18n'
 import Vuex from 'vuex'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import store from './store'
+import FlagIcon from 'vue-flag-icon'
 
 //scss
 import './theme/style.css'
@@ -24,8 +25,10 @@ import { GridInstaller } from '@progress/kendo-grid-vue-wrapper'
 import { DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
 import { MaskedTextBox, InputsInstaller } from '@progress/kendo-inputs-vue-wrapper'
 import { Validator, ValidatorInstaller } from '@progress/kendo-validator-vue-wrapper'
-import { AutoComplete,  ComboBox,  DropDownList,  MultiSelect,
-         MultiColumnComboBox,  MultiColumnComboBoxColumn,  DropdownsInstaller } from '@progress/kendo-dropdowns-vue-wrapper'
+import {
+    AutoComplete, ComboBox, DropDownList, MultiSelect,
+    MultiColumnComboBox, MultiColumnComboBoxColumn, DropdownsInstaller
+} from '@progress/kendo-dropdowns-vue-wrapper'
 import { TreeView, TreeViewItem, TreeViewInstaller } from '@progress/kendo-treeview-vue-wrapper'
 import { DropDownTree, DropDownTreeInstaller } from '@progress/kendo-dropdowntree-vue-wrapper'
 import { Upload, UploadInstaller } from '@progress/kendo-upload-vue-wrapper'
@@ -42,42 +45,43 @@ Vue.use(DateinputsInstaller)
 Vue.use(TreeViewInstaller)
 Vue.use(DropDownTreeInstaller)
 Vue.use(UploadInstaller)
+Vue.use(FlagIcon)
 
 Vue.component(
-  //kendo starts
-  Calendar.name,  
-  Calendar, 
-  Grid.name,
-  Grid, 
-  GridInstaller.name, 
-  GridInstaller, 
-  MaskedTextBox.name, 
-  InputsInstaller.name, 
-  MaskedTextBox, 
-  InputsInstaller,
-  Validator,
-  Validator.name,
-  ValidatorInstaller,
-  ValidatorInstaller.name,
-  DataSourceInstaller,
-  AutoComplete,
-  ComboBox,
-  DropDownList,
-  MultiSelect,
-  MultiColumnComboBox,
-  MultiColumnComboBoxColumn,
-  DatePicker,
-  TreeView,
-  TreeViewItem,
-  DropDownTree,
-  Upload
-  //kendo ends
-  //form validation starts
-  //Vuelidate,
-  //form validation ends
-  //bootstrap starts
+    //kendo starts
+    Calendar.name,
+    Calendar,
+    Grid.name,
+    Grid,
+    GridInstaller.name,
+    GridInstaller,
+    MaskedTextBox.name,
+    InputsInstaller.name,
+    MaskedTextBox,
+    InputsInstaller,
+    Validator,
+    Validator.name,
+    ValidatorInstaller,
+    ValidatorInstaller.name,
+    DataSourceInstaller,
+    AutoComplete,
+    ComboBox,
+    DropDownList,
+    MultiSelect,
+    MultiColumnComboBox,
+    MultiColumnComboBoxColumn,
+    DatePicker,
+    TreeView,
+    TreeViewItem,
+    DropDownTree,
+    Upload
+    //kendo ends
+    //form validation starts
+    //Vuelidate,
+    //form validation ends
+    //bootstrap starts
 
-  //bootstrap ends
+    //bootstrap ends
 )
 Vue.component('default-layout', Default)
 Vue.component('no-bars-layout', NoBars)
@@ -94,18 +98,18 @@ window.$ = $;
 
 
 new Vue({
-  router,
-  i18n,
-  store,
-  render: h => h(App),
+    router,
+    i18n,
+    store,
+    render: h => h(App),
 
-  components: {
-    App,
-    Calendar,
-    Grid,
-    GridInstaller,
-    MaskedTextBox, 
-    InputsInstaller,
-    DataSourceInstaller
-  }
+    components: {
+        App,
+        Calendar,
+        Grid,
+        GridInstaller,
+        MaskedTextBox,
+        InputsInstaller,
+        DataSourceInstaller
+    }
 }).$mount('#app')
