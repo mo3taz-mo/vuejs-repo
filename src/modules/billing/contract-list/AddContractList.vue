@@ -5,7 +5,7 @@
                 <div class="col-sm-6">
                     <div class="form-group row mt0 mb0">
                         <label class="col-sm-4 col-form-label">Contract Code</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-7 disabled">
                             <input disabled 
                                     type="text" 
                                     id="Code"
@@ -72,12 +72,12 @@
                         </div>
                         <!--Beneficiary Types-->
                         <label class="col-sm-4 col-form-label">Beneficiary Types</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-7 pt7">
                             <input type="radio" name="SelectedTypes" id="AllTypes" 
                                     class="k-radio" 
                                      v-model="formData.types" 
                                      value="All">
-                            <label for="AllTypes" class="k-radio-label">
+                            <label for="AllTypes" class="k-radio-label mr10">
                                 All Types
                             </label>
                             <input type="radio" name="SelectedTypes" 
@@ -85,19 +85,17 @@
                                     class="k-radio" 
                                     v-model="formData.types" 
                                     value="Selected">
-                            <label for="SelectedTypes" class="k-radio-label">
+                            <label for="SelectedTypes" class="k-radio-label mr10">
                                 Selected Types
                             </label>
                         </div>                                            
-                        <div class="row" v-if="formData.types=== 'Selected'" style="width: 100%;">
+                        <div class="row" v-if="formData.types=== 'Selected'">
                             <label class="col-sm-4 col-form-label">Selected Types</label>
                             <div class="col-sm-7">
                                 <kendo-dropdowntree :data-source="formData.SelectedTypes"
                                                     :checkboxes="true"
                                                     :check-all="true"
-                                                    :placeholder="'Select ...'"
-                                                    required
-                                                    validationMessage="Field is required">
+                                                    :placeholder="'Select ...'">
                                 </kendo-dropdowntree>
                             </div>
                         </div>
@@ -163,12 +161,12 @@
                         </div>
                         <!--Contractor Clients-->
                         <label class="col-sm-4 col-form-label">Contractor Clients</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-7 pt7">
                             <input type="radio" name="SelectedClients" id="AllClients" 
                                     class="k-radio" 
                                      v-model="formData.Clients" 
                                      value="AllClients">
-                            <label for="AllClients" class="k-radio-label">
+                            <label for="AllClients" class="k-radio-label mr10">
                                 All Clients
                             </label>
                             <input type="radio" name="SelectedClients" 
@@ -176,19 +174,17 @@
                                     class="k-radio" 
                                     v-model="formData.Clients" 
                                     value="SelectedClients">
-                            <label for="SelectedClients" class="k-radio-label">
+                            <label for="SelectedClients" class="k-radio-label mr10">
                                 Selected Clients
                             </label>
                         </div>                                            
-                        <div class="row" v-if="formData.Clients=== 'SelectedClients'" style="width: 100%;">
+                        <div class="row" v-if="formData.Clients=== 'SelectedClients'">
                             <label class="col-sm-4 col-form-label">Selected Clients</label>
                             <div class="col-sm-7">
-                                <kendo-dropdowntree :data-source="formData.SelectedTypes"
+                                <kendo-dropdowntree :data-source="formData.SelectedClients"
                                                     :checkboxes="true"
                                                     :check-all="true"
-                                                    :placeholder="'Select ...'"
-                                                    required
-                                                    validationMessage="Field is required">
+                                                    :placeholder="'Select ...'">
                                 </kendo-dropdowntree>
                             </div>
                         </div>
@@ -201,8 +197,8 @@
                 </div>
             </div> 
             <div class="row">
-                <div class="form-group col">
-                    <button class="btn btn-outline-primary btn-sm" type="submit">Add</button>
+                <div class="form-group col-sm-11 p0 mt15">
+                    <button class="btn btn-primary pull-right btn-sm" type="submit">Add</button>
                 </div>
             </div>
         </form>

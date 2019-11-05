@@ -15,11 +15,50 @@ body, html{
     .mb0{
         margin-bottom: 0;
     }
+    .p0{
+        padding: 0 !important;
+    }
+    .pt7{
+        padding-top: 7px; 
+    }
+    .mr10{
+        margin-right: 10px;
+    }
+    .mt15{
+        margin-top: 15px;
+    }
 }
 #app{
     height: 100%;
 }
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active, 
+.btn-primary:not(:disabled):not(.disabled).active, 
+.show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #03a9f3;
+    border-color: #0498da;
+}
 form{
+    font-size: 13px;
+    .row{
+        .row{
+            width: 95%;
+            margin: 0;
+            .row{
+                width: 100%
+            }
+        }
+    }
+    div.disabled{
+        cursor: not-allowed;
+    }
+    .k-tooltip-validation.k-invalid-msg{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0 14px 0 0;
+    }
     .k-dateinput, .k-datepicker, 
     .k-datetimepicker, .k-dropdown, 
     .k-multiselect, .k-numerictextbox, 
@@ -28,7 +67,6 @@ form{
     }
     .col-form-label{
         text-align: right;
-        font-size: 13px;
         padding-right: 0;
         line-height: 15px;
         span{
@@ -36,6 +74,7 @@ form{
         }
     }
     .form-control, 
+    input,
     input:-internal-autofill-selected,
     .k-dropdown .k-dropdown-wrap,    
     .k-dropdown .k-dropdown-wrap:hover, 
@@ -43,22 +82,50 @@ form{
     .k-dropdown .k-dropdown-wrap.k-state-focused, 
     .k-dropdown .k-dropdown-wrap.k-state-active,
     .k-datepicker .k-picker-wrap,
-    .k-widget.k-dropdowntree {
+    .k-widget.k-dropdowntree,
+    .k-upload .k-dropzone,
+    .k-textbox:hover, 
+    .k-textbox.k-state-hover, 
+    .k-textarea:hover, 
+    .k-textarea.k-state-hover, 
+    .k-input.k-textbox:hover, 
+    .k-input.k-textbox ,
+    .k-input.k-textbox.k-state-hover {
         border: none;
         background: transparent;
-        border-bottom: 2px solid #c5c5c5;
-        padding: 0;
+        border-bottom: 2px solid #848484;
+        padding-top: 0;
+        padding-bottom: 0; 
         box-shadow: none;
         outline: none;
+        width: 100%;
+        &:hover{
+            border-bottom: 2px solid #848484;
+        }
         &:focus{
             background: transparent;
             box-shadow: none;
             outline: none
+        }        
+        .k-dropdown-wrap.k-state-default,
+        .k-multiselect-wrap,
+        .k-multiselect-wrap:hover, 
+        .k-multiselect-wrap.k-state-hover, 
+        .k-numerictextbox .k-state-hover{
+            border: none;
+            background: transparent;
+            padding: 0;
+            box-shadow: none;
+            outline: none;
         }
+    }
+    .k-upload .k-upload-button, .k-upload{
+        background: none;
+        border: none;
     }
     .form-control:disabled, .form-control[readonly] {
         background-color: transparent;
-        opacity: 0.7;
+        opacity: 0.5;
         cursor: not-allowed;
     }
 }

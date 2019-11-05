@@ -28,7 +28,7 @@
     #app-footer{
         position: fixed;
         bottom: 0;
-        width: 82%;
+        width: 82.3%;
         z-index: 2;
     }
 </style>
