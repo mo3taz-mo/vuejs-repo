@@ -1,4 +1,7 @@
 export default {
     name: 'dashboard-id',
-    methods: {},
-  }
+    data: () => ({
+        user: localStorage.getItem('userName')
+    }),
+    methods: {}
+}

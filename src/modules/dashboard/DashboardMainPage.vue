@@ -1,5 +1,6 @@
 <template>
-  <div id="dashboard-id">okoo
+  <div id="dashboard-id">
+      <strong>Welcome {{ user }} </strong>
   </div>
 </template>
 
