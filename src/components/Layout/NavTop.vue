@@ -3,7 +3,7 @@
     <div class="top-left">
         <div class="navbar-header">
             <!--<a class="navbar-brand" href="./"><img src="../../assets/images/logo.png" alt="Logo"></a>-->
-            <a class="navbar-brand" href="./"><img src="../../assets/images/logo2.png" alt="Logo"></a> 
+            <a class="navbar-brand" href="./"><img src="../../assets/images/logo2.png" alt="Logo"></a>
             <!-- <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a> -->
         </div>
     </div>
@@ -19,7 +19,7 @@
                     </form>
                 </div>
 
-                <div class="dropdown for-notification">
+                <!-- <div class="dropdown for-notification">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-bell"></i>
@@ -40,9 +40,20 @@
                             <p>Server #3 overloaded.</p>
                         </a>
                     </div>
+                </div> -->
+                <div class="dropdown for-notification">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-language"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="notification">
+                        <a class="dropdown-item media" href="javascript:;" v-for="lang in languages" :key="lang.title" @click="changeLocale(lang.language)">
+                            <flag :iso="lang.flag" v-bind:squared=false /> {{lang.title}}
+                        </a>
+                    </div>
                 </div>
 
-                <div class="dropdown for-message">
+                <!-- <div class="dropdown for-message">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="message"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-envelope"></i>
@@ -83,7 +94,7 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="user-area dropdown float-right">
@@ -110,9 +121,33 @@
 </template>
 
 <script>
+    import i18n from '@/i18n'
   export default {
     name: 'nav-top',
-    
+    data() {
+        return {
+            languages: [
+                {
+                    flag: 'us',
+                    language: 'en',
+                    title: 'English'
+                },
+                {
+                    flag: 'eg',
+                    language: 'ar',
+                    title: 'Arabic'
+                }
+            ]
+        };
+    },
+    methods: {
+        changeLocale(locale) {
+            i18n.locale = locale;
+            localStorage.getItem('selectedLang', locale);
+            localStorage.setItem('selectedLang', locale);
+            location.reload()
+        }
+    }
   }
 </script>
 

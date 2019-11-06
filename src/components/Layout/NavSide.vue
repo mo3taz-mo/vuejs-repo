@@ -9,26 +9,26 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="index.html"><i class="menu-icon fa fa-laptop"></i>{{$t('Dashboard')}} </a>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"> <i class="menu-icon fa fa-id-badge"></i>Admin</a>
+                            aria-expanded="false"> <i class="menu-icon fa fa-id-badge"></i>{{$t('Admin')}}</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-id-card-o"></i><router-link :to="'/create-user'">Create New User</router-link></li>
-                            <li><i class="fa fa-bars"></i><router-link :to="'/user-list'">Users List</router-link></li>
+                            <li><i class="fa fa-id-card-o"></i><router-link :to="'/create-user'">{{$t('CreateNewUser')}}</router-link></li>
+                            <li><i class="fa fa-bars"></i><router-link :to="'/user-list'">{{$t('UsersList')}}</router-link></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Billing</a>
+                            aria-expanded="false"> <i class="menu-icon fa fa-table"></i>{{$t('Billing')}}</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li>
                                 <i class="fa fa-table"></i>
-                                <router-link :to="'/contract-category'">Contract Category</router-link>
+                                <router-link :to="'/contract-category'">{{$t('ContractCategory')}}</router-link>
                             </li>
                             <li><i class="fa fa-table"></i>
-                                <router-link :to="'/contract-list'">Contract List</router-link>
+                                <router-link :to="'/contract-list'">{{$t('ContractList')}}</router-link>
                             </li>
                         </ul>
                     </li>
