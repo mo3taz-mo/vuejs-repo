@@ -54,3 +54,46 @@ export const stopPasteEn = {
         });
     }
 };
+
+//Only numbers
+export const onlyNumeric = {
+    bind(el) {
+        el.addEventListener('keypress', function(e) {
+            if(!(e.keyCode >= 48 && e.keyCode <= 57)){
+                e.preventDefault();
+            }
+            else{
+                return;
+            }
+        });
+    }    
+};
+
+//allow decimal
+//Only numbers
+export const allowDecimal = {
+    bind(el) {
+        el.addEventListener('keypress', function(e) {
+            if(e.keyCode > 31 && (e.keyCode < 48 || e.keyCode > 57) && e.keyCode != 46){
+                e.preventDefault();
+            }
+            else{
+                let regexp = /^\d*(\.\d{0,1})?$/;
+                //let regexp = new RegExp('/^\\d*(\\.\\d{0,1})?$/');
+                if(!regexp.test(el.value)){
+                    e.preventDefault();
+                }
+                return;
+            }
+        });
+    }
+    
+};
+
+
+
+// var ex = /^\d*\.$/;
+// console.log(ex.test(el.value) + " - " + el.value);
+// if(ex.test(el.value)==false){
+//     el.value = el.value.substring(0,el.value.length - 1);
+// }

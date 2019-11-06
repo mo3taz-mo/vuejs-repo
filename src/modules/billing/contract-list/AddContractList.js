@@ -1,5 +1,5 @@
 import { EventBus } from '@/services/event-bus.js';
-import { onlyEn } from '@/directives/InputHelpers.js'
+import { onlyEn, onlyNumeric, allowDecimal } from '@/directives/InputHelpers.js';
 export default {
     name: "add-contract-list",
     methods: {
@@ -86,6 +86,8 @@ export default {
         };
     },
     directives: {
-        onlyEn
+        onlyEn,
+        onlyNumeric,
+        allowDecimal
     },
 }

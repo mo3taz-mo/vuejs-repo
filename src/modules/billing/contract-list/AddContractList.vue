@@ -5,8 +5,8 @@
                 <div class="col-sm-6">
                     <div class="form-group row mt0 mb0">
                         <label class="col-sm-4 col-form-label">Contract Code</label>
-                        <div class="col-sm-7 disabled">
-                            <input disabled 
+                        <div class="col-sm-7">
+                            <input  v-allow-decimal="2" 
                                     type="text" 
                                     id="Code"
                                     name="Code"
