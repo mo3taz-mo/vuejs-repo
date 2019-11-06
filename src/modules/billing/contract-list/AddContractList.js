@@ -7,6 +7,7 @@ export default {
             var validator = this.kendoValidator
             if (validator.validate()) {
                 EventBus.$emit('update-data', formData);
+                this.formData = {};
                 this.$router.push("/contract-list");
             } 
         }
