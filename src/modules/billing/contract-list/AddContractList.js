@@ -1,5 +1,5 @@
 import { EventBus } from '@/services/event-bus.js';
-import { onlyEn } from '@/directives/InputHelpers.js'
+import { onlyAr, onlyEn } from '@/directives/InputHelpers.js'
 export default {
     name: "add-contract-list",
     methods: {
@@ -8,7 +8,7 @@ export default {
             if (validator.validate()) {
                 EventBus.$emit('update-data', formData);
                 this.$router.push("/contract-list");
-            } 
+            }
         }
     },
     data: () => ({
@@ -16,8 +16,8 @@ export default {
         formData: {
             Code: '',
             EnglishName: '',
-            ArabicName:'',
-            Description:'',
+            ArabicName: '',
+            Description: '',
             ContractType: [
                 { text: 'Credit', value: '1' },
                 { text: 'Cash', value: '2' }
@@ -26,9 +26,9 @@ export default {
                 { text: 'Class A', value: '1' },
                 { text: 'Class B', value: '2' }
             ],
-            ContractCategory:[],
-            ItemPriceList:[],
-            ServicePriceList:[],
+            ContractCategory: [],
+            ItemPriceList: [],
+            ServicePriceList: [],
             currentDate: new Date(),
             ContractorTree: new kendo.data.HierarchicalDataSource({
                 data: [{
@@ -50,19 +50,19 @@ export default {
             SelectedTypes: new kendo.data.HierarchicalDataSource({
                 data: [{
                     text: 'Personal'
-                },{
+                }, {
                     text: 'Family'
                 }]
             }),
-            Clients:'AllClients',
+            Clients: 'AllClients',
             SelectedClients: new kendo.data.HierarchicalDataSource({
                 data: [{
                     text: 'Personal'
-                },{
+                }, {
                     text: 'Family'
                 }]
             })
-        },  
+        },
     }),
     mounted: function () {
         /*
@@ -85,6 +85,7 @@ export default {
         };
     },
     directives: {
-        onlyEn
+        onlyEn,
+        onlyAr
     },
 }
