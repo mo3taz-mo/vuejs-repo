@@ -1,17 +1,7 @@
-// import kendo from '@progress/kendo-ui'
-
 export default {
     name: "contract-category",
     data() {
         return {
-            // schemaModelFields: {
-            //     ContractID: { editable: false, nullable: true },
-            //     Code: { type: 'number', validation: { required: true, min: 1 } },
-            //     EnName: { validation: { required: true } },
-            //     ArName: { validation: { required: true } },
-            //     ActivationStatus: { type: 'boolean' },
-            //     Description: { validation: { required: true } }
-            // },    
             schemaModelFields: {
                 ContractID: { editable: false, nullable: true },
                 Code: { type: 'number', validation: { min: 1 } },
@@ -63,9 +53,6 @@ export default {
         onDataBinding: function() {
             
         }
-        // create: function() {
-        //     alert('saraaa')
-        // }
     },
     computed: {
         getEnNames() {

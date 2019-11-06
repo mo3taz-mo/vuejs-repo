@@ -1,15 +1,15 @@
 <template>
     <div id="contract-list">
         <kendo-datasource ref="datasource" 
-                            :data="formData"
-                            :page-size="10"></kendo-datasource>
+                          :data="formData"
+                          :page-size="10">
+        </kendo-datasource>
         <kendo-grid :data-source-ref="'datasource'"
                     :pageable="true"
                     :editable="true"
                     :no-records="true"
                     :sortable="true"
-                    id="grid"
-                    @databinding="bindData">
+                    id="grid">
         <div class="k-header k-grid-toolbar">
             <router-link :to="'/add-contract-list'" class="k-button k-button-icontext k-grid-add">
                 <span class="k-icon k-i-plus"></span>Add new record
