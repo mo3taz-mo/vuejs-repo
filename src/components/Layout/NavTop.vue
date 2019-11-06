@@ -145,6 +145,7 @@
             i18n.locale = locale;
             localStorage.getItem('selectedLang', locale);
             localStorage.setItem('selectedLang', locale);
+            location.reload()
         }
     }
   }
