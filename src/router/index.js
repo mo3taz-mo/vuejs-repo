@@ -13,6 +13,7 @@ const UsersList = () => import('../modules/admin/users/UsersList.vue')
 const ContractCategory = () => import('../modules/billing/contract-category/ContractCategory.vue')
 const ContractList = () => import('../modules/billing/contract-list/ContractList.vue')
 const AddContractList = () => import('../modules/billing/contract-list/AddContractList.vue')
+const NotFound = () => import('../modules/NotFound.vue')
 
 const routes = [
   {
@@ -50,6 +51,11 @@ const routes = [
     path: '/add-contract-list',
     name: 'add-contract-list',
     component: AddContractList
+  },
+  {
+    path: '**',
+    name: 'not-found',
+    component: NotFound
   }
 ]
 

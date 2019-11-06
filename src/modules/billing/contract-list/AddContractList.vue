@@ -5,8 +5,8 @@
                 <div class="col-sm-6">
                     <div class="form-group row mt0 mb0">
                         <label class="col-sm-4 col-form-label">Contract Code</label>
-                        <div class="col-sm-7 disabled">
-                            <input disabled
+                        <div class="col-sm-7">
+                            <input  v-allow-decimal="2"
                                     type="text"
                                     id="Code"
                                     name="Code"
@@ -41,6 +41,8 @@
                                     :data-text-field="'text'"
                                     :data-value-field="'value'"
                                     :filter="'contains'"
+                                    :index="-1"
+                                    :placeholder="'Select Contract Category'"
                                     :options-label="'Contract Category'">
                         </kendo-dropdownlist>
                         </div>
@@ -52,14 +54,15 @@
                                     :data-text-field="'text'"
                                     :data-value-field="'value'"
                                     :filter="'contains'"
-                                    :options-label="'Service Price List'">
+                                    :index="-1"
+                                    :placeholder="'Select Service Price'">
                         </kendo-dropdownlist>
                         </div>
                         <!--start date-->
                         <label class="col-sm-4 col-form-label">Start Date</label>
                         <div class="col-sm-7">
-                            <kendo-datepicker :value="formData.currentDate"
-                                            :format="'dd/MM/yyyy'"></kendo-datepicker>
+                            <kendo-datepicker :format="'dd/MM/yyyy'"
+                                              :placeholder="'Select Date'"></kendo-datepicker>
                         </div>
                         <!--contractor-->
                         <label class="col-sm-4 col-form-label">Contractor</label>
@@ -94,6 +97,7 @@
                                 <kendo-dropdowntree :data-source="formData.SelectedTypes"
                                                     :checkboxes="true"
                                                     :check-all="true"
+                                                    :auto-close="false"
                                                     :placeholder="'Select ...'">
                                 </kendo-dropdowntree>
                             </div>
@@ -127,6 +131,7 @@
                                     :data-text-field="'text'"
                                     :data-value-field="'value'"
                                     :filter="'contains'"
+                                    :placeholder="'Select Contract Type'"
                                     :options-label="'Contract Type'">
                         </kendo-dropdownlist>
                         </div>
@@ -138,14 +143,16 @@
                                     :data-text-field="'text'"
                                     :data-value-field="'value'"
                                     :filter="'contains'"
+                                    :index="-1"
+                                    :placeholder="'Select Item Price'"
                                     :options-label="'Item Price List'">
                         </kendo-dropdownlist>
                         </div>
                         <!--end date-->
                         <label class="col-sm-4 col-form-label">End Date</label>
                         <div class="col-sm-7">
-                            <kendo-datepicker :value="formData.currentDate"
-                                            :format="'dd/MM/yyyy'"></kendo-datepicker>
+                            <kendo-datepicker :format="'dd/MM/yyyy'"
+                                              :placeholder="'Select Date'"></kendo-datepicker>
                         </div>
                         <!--Accommodation Class-->
                         <label class="col-sm-4 col-form-label">Accommodation Class</label>
@@ -155,6 +162,8 @@
                                     :data-text-field="'text'"
                                     :data-value-field="'value'"
                                     :filter="'contains'"
+                                    :index="-1"
+                                    :placeholder="'Select Accommodation Class'"
                                     :options-label="'Accommodation Class'">
                         </kendo-dropdownlist>
                         </div>
@@ -183,6 +192,7 @@
                                 <kendo-dropdowntree :data-source="formData.SelectedClients"
                                                     :checkboxes="true"
                                                     :check-all="true"
+                                                    :auto-close="false"
                                                     :placeholder="'Select ...'">
                                 </kendo-dropdowntree>
                             </div>
@@ -190,7 +200,10 @@
                         <!--Description-->
                         <label class="col-sm-4 col-form-label">Description</label>
                         <div class="col-sm-7">
-                            <textarea rows="3" cols="4" v-model="formData.Description" type="text" class="k-input k-textbox "></textarea>
+                            <textarea rows="3" cols="4" v-model="formData.Description"
+                                      type="text"
+                                      class="k-input k-textbox "
+                                      placeholder="Description..."></textarea>
                         </div>
                     </div>
                 </div>

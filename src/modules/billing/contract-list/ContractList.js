@@ -21,7 +21,7 @@ export default {
         }
     },
     created() {
-
+       
     },
     methods: {
         deleteHandler: function (e) {
@@ -43,10 +43,8 @@ export default {
             $("#grid").data("kendoGrid").dataSource.data(drawData);
         }
         EventBus.$on('update-data', (receivedData) => {
+            this.formData = receivedData;
             localStorage.tempData = JSON.stringify(receivedData);
         });
-    },
-    computed: {
-
     }
 }
