@@ -1,4 +1,4 @@
-import kendo from '@progress/kendo-ui'
+// import kendo from '@progress/kendo-ui'
 
 export default {
     name: "contract-category",
@@ -13,21 +13,55 @@ export default {
             //     Description: { validation: { required: true } }
             // },    
             schemaModelFields: {
-                ProductID: { editable: false, nullable: true },
-                ProductName: { validation: { required: true } },
-                UnitPrice: { type: 'number', validation: { required: true, min: 1 } },
-                Discontinued: { type: 'boolean' },
-                UnitsInStock: { type: 'number', validation: { min: 0, required: true } }
-            },       
-            contractCategoryDataSource: []
+                ContractID: { editable: false, nullable: true },
+                Code: { type: 'number', validation: { min: 1 } },
+                EnName: { validation: { required: true } },
+                ArName: { validation: { required: true } },
+                ActivationStatus: { type: 'boolean' },
+                Description: {  }
+            },    
+            contractCategoryList: [
+                {
+                    "ContractID": 1,
+                    "Code": 99,
+                    "EnName": "Sara",
+                    "ArName": "سارة",
+                    "Description": "Bla bla bla bla",
+                    "ActivationStatus": true
+                },
+                {
+                    "ContractID": 2,
+                    "Code": 45,
+                    "EnName": "Sara",
+                    "ArName": "سارة",
+                    "Description": "Bla bla bla bla",
+                    "ActivationStatus": false
+                }
+            ]
            
         }
     },
     methods: {
-        parameterMap: function(options, operation) {
-            if (operation !== 'read' && options.models) {
-                return { models: kendo.stringify(options.models) }
-            }
+        contractCategoryDataSource: function(e) {
+            e.success(this.contractCategoryList)
+        },
+        deleteHandler: function(e) {
+            e.preventDefault();
+            $(e.currentTarget).closest("tr").remove();
+            // slice this index from _data
+        },
+        createdDataSource: function(e) {
+            let ss = this.$refs.dataSourceRef.kendoWidget()
+            e.success(ss._data[0])
+            this.contractCategoryList = ss._data;
+        },
+        updatedDataSource: function(e) {
+            let ss = this.$refs.dataSourceRef.kendoWidget()
+            e.success(ss._data[0])
+            this.contractCategoryList = ss._data;
+        },
+        onDataBinding: function() {
+            
         }
         // create: function() {
         //     alert('saraaa')
@@ -35,14 +69,11 @@ export default {
     },
     computed: {
         getEnNames() {
-            return this.contractCategoryDataSource.map(dataSet => dataSet[0].EnName)
+            let names = this.contractCategoryList.map(dataItem => dataItem.EnName)
+            EventBus.$emit('setEnNamesInDdl', names);
         }
     },
-    mounted() {
-        var self = this
-        // eslint-disable-next-line no-undef
-        $.getJSON("contractCategoryData.json", function(json_data) {
-            self.contractCategoryDataSource = json_data
-        })
+    mounted: function () {
+        
     }
 }
