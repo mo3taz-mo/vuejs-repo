@@ -9,7 +9,7 @@ export default {
                 EventBus.$emit('update-data', formData);
                 this.formData = {};
                 this.$router.push("/contract-list");
-            } 
+            }
         }
     },
     data: () => ({
@@ -17,8 +17,8 @@ export default {
         formData: {
             Code: '',
             EnglishName: '',
-            ArabicName:'',
-            Description:'',
+            ArabicName: '',
+            Description: '',
             ContractType: [
                 { text: 'Credit', value: '1' },
                 { text: 'Cash', value: '2' }
@@ -27,12 +27,12 @@ export default {
                 { text: 'Class A', value: '1' },
                 { text: 'Class B', value: '2' }
             ],
-            ContractCategory:[], // Dynamic
-            ItemPriceList:[
+            ContractCategory: [], // Dynamic
+            ItemPriceList: [
                 { text: 'item price', value: '1' },
                 { text: 'list_insured', value: '2' }
             ],
-            ServicePriceList:[
+            ServicePriceList: [
                 { text: 'Cash foreigner 2018', value: '1' },
                 { text: 'Credit 2018', value: '2' },
                 { text: 'foreigner Pricelist 2018', value: '3' }
@@ -57,19 +57,19 @@ export default {
             SelectedTypes: new kendo.data.HierarchicalDataSource({
                 data: [{
                     text: 'Personal'
-                },{
+                }, {
                     text: 'Family'
                 }]
             }),
-            Clients:'AllClients',
+            Clients: 'AllClients',
             SelectedClients: new kendo.data.HierarchicalDataSource({
                 data: [{
                     text: 'Personal'
-                },{
+                }, {
                     text: 'Family'
                 }]
             })
-        },  
+        },
     }),
     mounted: function () {
         /*
@@ -101,7 +101,7 @@ export default {
             receivedData.map((item, index) => {
                 this.formData.ContractCategory.push({ text: item, value: index })
             })
-            
+
         }
     },
     directives: {
