@@ -1,6 +1,5 @@
 import { EventBus } from '@/services/event-bus.js';
-import { onlyEn, onlyAr } from '@/directives/InputHelpers.js'
-
+import { onlyAr, onlyEn, onlyNumeric, allowDecimal } from '@/directives/InputHelpers.js';
 export default {
     name: "add-contract-list",
     methods: {
@@ -8,6 +7,7 @@ export default {
             var validator = this.kendoValidator
             if (validator.validate()) {
                 EventBus.$emit('update-data', formData);
+                this.formData = {};
                 this.$router.push("/contract-list");
             } 
         }
@@ -106,6 +106,8 @@ export default {
     },
     directives: {
         onlyEn,
-        onlyAr
+        onlyAr,
+        onlyNumeric,
+        allowDecimal
     },
 }

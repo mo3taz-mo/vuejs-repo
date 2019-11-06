@@ -1,6 +1,6 @@
 <template>
-    <h1 id="create-user">Create New User</h1>
-    
+    <h1 id="create-user">{{$t('CreateNewUser')}}</h1>
+
 </template>
 
 <script>

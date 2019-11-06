@@ -9,7 +9,7 @@ import store from './store'
 import FlagIcon from 'vue-flag-icon'
 
 //scss
-import './theme/style.css'
+localStorage.getItem('selectedLang') == 'en' ? import('./theme/style.css') : import('./theme/style-rtl.css')
 import './theme/custom.scss'
 
 
