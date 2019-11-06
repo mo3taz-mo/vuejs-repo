@@ -12,6 +12,7 @@ import FlagIcon from 'vue-flag-icon'
 import './theme/style.css'
 import './theme/custom.scss'
 
+
 //layouts
 import Default from './components/Layout/Default.vue'
 import NoBars from './components/Layout/NoBars.vue'
@@ -19,6 +20,7 @@ import NoBars from './components/Layout/NoBars.vue'
 //kendo
 import '@progress/kendo-ui'
 import '@progress/kendo-base-components-vue-wrapper'
+import './theme/variables.scss';
 import '@progress/kendo-theme-default/dist/all.css'
 import { Calendar, DatePicker, DateinputsInstaller } from '@progress/kendo-dateinputs-vue-wrapper'
 import { GridInstaller } from '@progress/kendo-grid-vue-wrapper'

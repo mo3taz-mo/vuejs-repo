@@ -1,3 +1,5 @@
+import { EventBus } from '@/services/event-bus.js';
+
 export default {
     name: "contract-category",
     data() {
@@ -27,8 +29,8 @@ export default {
                     "Description": "Bla bla bla bla",
                     "ActivationStatus": false
                 }
-            ]
-           
+            ],
+            contractCategoryNames: []
         }
     },
     methods: {
@@ -51,13 +53,15 @@ export default {
             this.contractCategoryList = ss._data;
         },
         onDataBinding: function() {
-            
+            this.getEnNames
         }
     },
     computed: {
-        getEnNames() {
-            let names = this.contractCategoryList.map(dataItem => dataItem.EnName)
-            EventBus.$emit('setEnNamesInDdl', names);
+        getEnNames() { debugger
+            this.contractCategoryNames = this.contractCategoryList.map(dataItem => dataItem.EnName)
+            EventBus.$emit('setEnNamesInDdl', this.contractCategoryNames);
+            console.log('computed', this.contractCategoryNames)
+            localStorage.setItem('ddlData', this.contractCategoryNames)
         }
     },
     mounted: function () {
