@@ -55,6 +55,7 @@ const routes = [
   {
     path: '**',
     name: 'not-found',
+    meta: {layout: 'no-bars'},
     component: NotFound
   }
 ]
