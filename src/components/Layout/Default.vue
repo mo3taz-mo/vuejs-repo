@@ -3,7 +3,7 @@
     <NavSide />
     <div id="right-panel" class="right-panel">
         <NavTop />
-        <Breadcrumbs />
+        <Breadcrumbs v-bind:pagetitle="pagetitle" />
         <div class="content">
           <slot />          
         </div>
@@ -21,6 +21,11 @@ import AppFooter from '@/components/Layout/AppFooter';
 import Breadcrumbs from '@/components/Layout/breadcrumbs';
 
 export default {
+  watch: {
+    '$route' (to) {
+      this.pagetitle = to.meta.title;
+    }
+  },
   components: {
     NavSide,
     NavTop,
@@ -28,7 +33,7 @@ export default {
     Breadcrumbs
   },
   data: () => ({
-    
+    pagetitle: '',
   }),
 };
 </script>

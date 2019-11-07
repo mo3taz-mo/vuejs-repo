@@ -11,6 +11,12 @@
 const default_layout = "default";
 
 export default {
+  watch: {
+    '$route' (to) {
+      document.title = to.meta.title;
+      this.pagetitle = to.meta.title;
+    }
+  },
   computed:{
     layout(){
       return (this.$route.meta.layout || default_layout) + '-layout';
@@ -20,8 +26,5 @@ export default {
   components: {
     // NavSide,
   },
-  data: () => ({
-    
-  }),
 };
 </script>
