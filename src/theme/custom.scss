@@ -1,6 +1,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
+
 body, html{
     height: 100%;
     .clear{
@@ -125,6 +126,14 @@ form{
         background: none;
         border: none;
     }
+    .k-upload .k-upload-button{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    // .k-radio:checked+.k-radio-label::before {
+    //     border-color: #3f51b5;
+    //     background-color: #3f51b5;
+    // }
     .form-control:disabled, .form-control[readonly] {
         background-color: transparent;
         opacity: 0.5;
