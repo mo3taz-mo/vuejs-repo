@@ -1,5 +1,5 @@
 <template>
-    <h1 id="create-user">{{$t('CreateNewUser')}}</h1>
+    <h1 id="create-user"></h1>
 
 </template>
 
