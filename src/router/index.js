@@ -19,42 +19,61 @@ const routes = [
   {
     path: '/',
     name: 'login-id',
-    meta: {layout: 'no-bars'},
+    meta: {layout: 'no-bars', title: 'Login'},
     component: Login
   },
   {
     path: '/dashboard',
-    name: 'dashboard-id',
-    component: Dashboard
+    name: 'dashboard',
+    component: Dashboard,
+    meta : {
+      title: 'Dashboard'
+    }
   },
   {
     path: '/create-user',
     name: 'create-user',
-    component: CreateNewUser
+    component: CreateNewUser,
+    meta : {
+      title: 'Create User'
+    }
   },
   {
     path: '/user-list',
     name: 'user-list',
-    component: UsersList
+    component: UsersList,
+    meta : {
+      title: 'User List'
+    }
   },
   {
     path: '/contract-category',
     name: 'contract-category',
-    component: ContractCategory
+    component: ContractCategory,
+    meta : {
+      title: 'Contract Category'
+    }
   },
   {
     path: '/contract-list',
     name: 'contract-list',
-    component: ContractList
+    component: ContractList,
+    meta : {
+      title: 'Contract List'
+    }
   },
   {
     path: '/add-contract-list',
     name: 'add-contract-list',
-    component: AddContractList
+    component: AddContractList,
+    meta : {
+      title: 'Add Contract List'
+    }
   },
   {
     path: '**',
     name: 'not-found',
+    meta: {layout: 'no-bars'},
     component: NotFound
   }
 ]

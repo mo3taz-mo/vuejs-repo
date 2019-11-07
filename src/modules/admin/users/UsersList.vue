@@ -1,5 +1,5 @@
 <template>
-    <h1 id="user-list">{{$t('UsersList')}}</h1>
+    <h1 id="user-list"></h1>
 </template>
 
 <script>

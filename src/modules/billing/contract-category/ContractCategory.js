@@ -7,8 +7,26 @@ export default {
             schemaModelFields: {
                 ContractID: { editable: false, nullable: true },
                 Code: { type: 'number', validation: { min: 1 } },
-                EnName: { validation: { required: true } },
-                ArName: { validation: { required: true } },
+                EnName: { validation: 
+                    { required: true,
+                        enName: function(input) {
+                            if (input.is("[name='EnName']") && input.val() != "") {
+                                return /[A-Za-z ]/.test(input.val());
+                            }
+                            return true;
+                        } 
+                    } 
+                },
+                ArName: { validation: 
+                    { required: true,
+                        arName: function(input) {
+                            if (input.is("[name='ArName']") && input.val() != "") {
+                                return /[ء-ي ]/.test(input.val());
+                            }
+                            return true;
+                        }
+                    } 
+                },
                 ActivationStatus: { type: 'boolean' },
                 Description: {  }
             },    
