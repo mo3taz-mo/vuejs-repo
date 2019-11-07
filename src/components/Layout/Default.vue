@@ -33,7 +33,7 @@ export default {
     Breadcrumbs
   },
   data: () => ({
-    pagetitle: '',
+    pagetitle: 'Dashboard',
   }),
 };
 </script>
