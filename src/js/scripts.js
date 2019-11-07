@@ -1,17 +1,17 @@
 
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     'use strict';
 
     [].slice
         .call(document.querySelectorAll('select.cs-select'))
-        .forEach(function(el) {
+        .forEach(function (el) {
             new SelectFx(el);
         });
 
     jQuery('.selectpicker').selectpicker;
 
-    $('.search-trigger').on('click', function(event) {
+    $('.search-trigger').on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();
         $('.search-trigger')
@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
             .addClass('open');
     });
 
-    $('.search-close').on('click', function(event) {
+    $('.search-close').on('click', function (event) {
         event.preventDefault();
         event.stopPropagation();
         $('.search-trigger')
@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
     // $('.traffic-chart').css('height', chartsheight-122);
 
     // Counter Number
-    $('.count').each(function() {
+    $('.count').each(function () {
         $(this)
             .prop('Counter', 0)
             .animate(
@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
                 {
                     duration: 3000,
                     easing: 'swing',
-                    step: function(now) {
+                    step: function (now) {
                         $(this).text(Math.ceil(now));
                     }
                 }
@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
     });
 
     // Menu Trigger
-    $('#menuToggle').on('click', function(event) {
+    $('#menuToggle').on('click', function (event) {
         debugger;
         var windowWidth = $(window).width();
         if (windowWidth < 1010) {
@@ -69,8 +69,8 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $('.menu-item-has-children.dropdown').each(function() {
-        $(this).on('click', function() {
+    $('.menu-item-has-children.dropdown').each(function () {
+        $(this).on('click', function () {
             var $temp_text = $(this)
                 .children('.dropdown-toggle')
                 .html();
@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
     });
 
     // Load Resize
-    $(window).on('load resize', function(event) {
+    $(window).on('load resize', function (event) {
         var windowWidth = $(window).width();
         if (windowWidth < 1010) {
             $('body').addClass('small-device');
