@@ -15,9 +15,9 @@ function loadLocaleMessages() {
     })
     return messages
 }
-
+localStorage.setItem('selectedLang', 'en')
 export default new VueI18n({
-    locale: localStorage.getItem('selectedLang') || process.env.VUE_APP_I18N_LOCALE || 'en',
+    locale: localStorage.getItem('selectedLang') || 'en',
     //locale: process.env.VUE_APP_I18N_LOCALE || 'en',
     fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
     messages: loadLocaleMessages()
